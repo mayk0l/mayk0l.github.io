@@ -1,13 +1,19 @@
 ---
-title: "TakiQR: creando un generador de menús QR en tiempo récord"
-description: "Cómo desarrollé TakiQR, una herramienta simple para generar menús digitales con códigos QR, usando Astro y TailwindCSS."
+title: 'TakiQR: creando un generador de menús QR en tiempo récord'
+description: >-
+  Cómo desarrollé TakiQR, una herramienta simple para generar menús digitales
+  con códigos QR, usando Astro y TailwindCSS.
 date: 2025-07-01T11:41:22.064Z
-author: "Maykol Salgado"
-tags: ["astro", "typescript", "qr", "restaurantes", "mvp"]
-coverImage: ""
+author: Maykol Salgado
+tags:
+  - astro
+  - typescript
+  - qr
+  - restaurantes
+  - mvp
+coverImage: ''
 draft: false
 ---
-
 # TakiQR: creando un generador de menús QR en tiempo récord
 
 Durante la pandemia, los códigos QR se volvieron esenciales para los restaurantes. Pero muchos negocios pequeños seguían imprimiendo menús físicos o pagando mensualidades por plataformas complejas que no necesitaban.

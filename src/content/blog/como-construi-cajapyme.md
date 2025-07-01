@@ -1,13 +1,21 @@
 ---
-title: "Cómo construí CajaPyme: de una idea simple a una solución real para microempresas"
-description: "La historia detrás del desarrollo de CajaPyme, un sistema de control de ingresos y gastos diseñado específicamente para microempresas chilenas."
+title: >-
+  Cómo construí CajaPyme: de una idea simple a una solución real para
+  microempresas
+description: >-
+  La historia detrás del desarrollo de CajaPyme, un sistema de control de
+  ingresos y gastos diseñado específicamente para microempresas chilenas.
 date: 2025-07-01T11:41:21.338Z
-author: "Maykol Salgado"
-tags: ["react", "typescript", "postgresql", "pyme", "fintech"]
-coverImage: ""
+author: Maykol Salgado
+tags:
+  - react
+  - typescript
+  - postgresql
+  - pyme
+  - fintech
+coverImage: ''
 draft: false
 ---
-
 # Cómo construí CajaPyme: de una idea simple a una solución real para microempresas
 
 Hace unos meses, mientras conversaba con varios emprendedores de mi zona, me di cuenta de un problema recurrente: **la mayoría de las microempresas chilenas llevaban sus finanzas en cuadernos de papel o Excel básicos**. Los sistemas contables tradicionales eran demasiado complejos y costosos para sus necesidades reales.
