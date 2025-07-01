@@ -3,6 +3,7 @@ export interface Props {
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
+  target?: string;
   class?: string;
 }
 
@@ -10,6 +11,7 @@ const {
   variant = 'primary', 
   size = 'md', 
   href, 
+  target,
   class: className = '' 
 } = Astro.props;
 
@@ -31,7 +33,7 @@ const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}
 ---
 
 {href ? (
-  <a href={href} class={classes}>
+  <a href={href} target={target} class={classes}>
     <slot />
   </a>
 ) : (
