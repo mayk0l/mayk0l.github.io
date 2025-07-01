@@ -8,7 +8,7 @@ export const analyticsConfig = {
   
   // Google Search Console
   searchConsoleEnabled: true, // ✅ Activado
-  searchConsoleCode: 'ztdU9J4T8QvuvURI-7jqUtZPacWSXTV5w4Qn9v-NmmQ', // ✅ Código de verificación correcto
+  searchConsoleCode: 'ASxiSwmQQIrlJ7coeYdJm3ZIg8nci2QVOWjqG2zT14M', // ✅ Código de verificación actualizado
   
   // Bing Webmaster Tools (opcional)
   bingWebmasterCode: 'tu-codigo-bing', // Reemplaza con tu código real si lo usas
