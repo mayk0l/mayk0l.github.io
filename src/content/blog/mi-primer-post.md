@@ -1,10 +1,11 @@
 ---
 title: "Mi Primer Post Técnico"
 description: "Una introducción a mi blog y mi enfoque como desarrollador fullstack."
-date: 2023-10-01T00:00:00.000Z
+date: 2025-07-01T11:41:21.719Z
 author: "Maykol Salgado"
 tags: ["backend", "fullstack", "tecnología"]
-coverImage: "/images/primer-post-800x600.webp"
+coverImage: ""
+draft: false
 ---
 
 ¡Bienvenidos a mi blog! Aquí compartiré conocimientos sobre desarrollo backend y fullstack, con un enfoque práctico y profesional.

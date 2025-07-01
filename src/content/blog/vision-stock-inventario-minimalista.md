@@ -1,10 +1,11 @@
 ---
 title: "Organizando el caos: por qué hice Vision Stock y cómo lo uso en mis propios proyectos"
 description: "La historia detrás de Vision Stock, un sistema de inventario minimalista que nació de una necesidad personal y se convirtió en herramienta para pequeños negocios."
-date: 2024-12-10T00:00:00.000Z
+date: 2025-07-01T12:10:23.389Z
 author: "Maykol Salgado"
 tags: ["react", "zustand", "mongodb", "inventario", "minimalismo"]
-coverImage: "/images/vision-stock-preview-800x600.webp"
+coverImage: ""
+draft: false
 ---
 
 # Organizando el caos: por qué hice Vision Stock y cómo lo uso en mis propios proyectos
