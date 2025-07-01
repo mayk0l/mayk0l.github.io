@@ -1,0 +1,87 @@
+---
+import type { SEOProps } from '../utils/seo';
+import { generateSEOTags, generateStructuredData } from '../utils/seo';
+
+export interface Props extends SEOProps {
+  structuredData?: any;
+  breadcrumbs?: Array<{ name: string; url: string }>;
+}
+
+const { 
+  title, 
+  description, 
+  keywords, 
+  image, 
+  url, 
+  type, 
+  noindex, 
+  canonical,
+  structuredData,
+  breadcrumbs 
+} = Astro.props;
+
+const seo = generateSEOTags({ title, description, keywords, image, url, type, noindex, canonical });
+
+// Generate default structured data
+const personData = generateStructuredData('Person', {});
+const webPageData = generateStructuredData('WebPage', { title, description, url });
+const breadcrumbData = breadcrumbs ? generateStructuredData('BreadcrumbList', { items: breadcrumbs }) : null;
+---
+
+<!-- Primary Meta Tags -->
+<title>{seo.title}</title>
+<meta name="title" content={seo.title} />
+<meta name="description" content={seo.description} />
+<meta name="keywords" content={seo.keywords} />
+<meta name="robots" content={seo.robots} />
+<meta name="author" content="Maykol Salgado" />
+<meta name="language" content="es" />
+<meta name="geo.region" content="CL" />
+<meta name="geo.country" content="Chile" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={seo.canonical} />
+
+<!-- PWA Manifest -->
+<link rel="manifest" href="/manifest.json" />
+
+<!-- Open Graph / Facebook -->
+{Object.entries(seo.ogTags).map(([property, content]) => (
+  <meta property={property} content={content} />
+))}
+
+<!-- Twitter -->
+{Object.entries(seo.twitterTags).map(([name, content]) => (
+  <meta name={name} content={content} />
+))}
+
+<!-- Additional Meta Tags -->
+<meta name="theme-color" content="#0891b2" />
+<meta name="msapplication-TileColor" content="#0891b2" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="//github.com" />
+<link rel="dns-prefetch" href="//linkedin.com" />
+<link rel="dns-prefetch" href="//twitter.com" />
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(personData)} />
+<script type="application/ld+json" set:html={JSON.stringify(webPageData)} />
+{structuredData && (
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+)}
+{breadcrumbData && (
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+)}
+
+<!-- Google Search Console Verification (agregar cuando tengas el código) -->
+<!-- <meta name="google-site-verification" content="TU_CODIGO_AQUI" /> -->
+
+<!-- Bing Webmaster Tools Verification (agregar cuando tengas el código) -->
+<!-- <meta name="msvalidate.01" content="TU_CODIGO_AQUI" /> -->

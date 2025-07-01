@@ -1,0 +1,91 @@
+---
+// Google Analytics, Google Search Console y otras herramientas de analytics
+export interface AnalyticsProps {
+  gtag?: string;
+  gtagEnabled?: boolean;
+  searchConsoleEnabled?: boolean;
+  searchConsoleCode?: string;
+  bingWebmasterCode?: string;
+  hotjarId?: string;
+  microsoftClarityId?: string;
+}
+
+const { 
+  gtag, 
+  gtagEnabled = false, 
+  searchConsoleEnabled = false,
+  searchConsoleCode,
+  bingWebmasterCode,
+  hotjarId,
+  microsoftClarityId
+} = Astro.props;
+
+// Solo en producción
+const isProduction = import.meta.env.PROD;
+---
+
+{isProduction && gtagEnabled && gtag && (
+  <>
+    <!-- Google Analytics GA4 -->
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag}`}></script>
+    <script define:vars={{ gtag }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtag, {
+        page_title: document.title,
+        page_location: window.location.href,
+        anonymize_ip: true,
+        cookie_flags: 'SameSite=None;Secure',
+        send_page_view: true
+      });
+      
+      // Track clicks en enlaces externos
+      document.addEventListener('click', function(e) {
+        const target = e.target.closest('a');
+        if (target && target.hostname !== window.location.hostname && target.href.startsWith('http')) {
+          gtag('event', 'click', {
+            event_category: 'outbound',
+            event_label: target.href,
+            transport_type: 'beacon'
+          });
+        }
+      });
+    </script>
+  </>
+)}
+
+{searchConsoleEnabled && searchConsoleCode && (
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content={searchConsoleCode} />
+)}
+
+{bingWebmasterCode && (
+  <!-- Bing Webmaster Tools Verification -->
+  <meta name="msvalidate.01" content={bingWebmasterCode} />
+)}
+
+{isProduction && hotjarId && (
+  <!-- Hotjar Tracking Code -->
+  <script define:vars={{ hotjarId }}>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:hotjarId,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+)}
+
+{isProduction && microsoftClarityId && (
+  <!-- Microsoft Clarity -->
+  <script define:vars={{ microsoftClarityId }}>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", microsoftClarityId);
+  </script>
+)}
