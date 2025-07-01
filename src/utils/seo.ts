@@ -1,7 +1,7 @@
 const seoData = {
   title: 'Maykol Salgado - Desarrollador Fullstack | React, TypeScript, Node.js',
-  description: 'Desarrollador de software fullstack especializado en React, TypeScript, Node.js y PostgreSQL. Creo soluciones modernas y eficientes para pymes y startups en Chile y LATAM.',
-  keywords: 'desarrollador fullstack, react, typescript, nodejs, postgresql, chile, software para pymes, desarrollador chile, programador fullstack, astro, tailwindcss',
+  description: 'Maykol Salgado, desarrollador de software fullstack especializado en React, TypeScript, Node.js y PostgreSQL. Creo soluciones modernas y eficientes para pymes y startups en Chile y LATAM.',
+  keywords: 'Maykol Salgado, maykol salgado, maykolsalgado, desarrollador fullstack, react, typescript, nodejs, postgresql, chile, software para pymes, desarrollador chile, programador fullstack, astro, tailwindcss, maykol nicolás salgado, maykol nicolas salgado',
   author: 'Maykol Salgado',
   url: 'https://maykolsalgado.me',
   image: 'https://maykolsalgado.me/images/og-maykol-salgado.svg',
@@ -75,8 +75,9 @@ export function generateStructuredData(type: 'Person' | 'WebPage' | 'Article' | 
         ...baseStructuredData,
         '@type': 'Person',
         name: 'Maykol Salgado',
+        alternateName: ['Maykol Nicolás Salgado', 'Maykol Nicolas Salgado', 'maykolsalgado'],
         jobTitle: 'Desarrollador Fullstack',
-        description: 'Desarrollador de software especializado en React, TypeScript, Node.js y PostgreSQL',
+        description: 'Maykol Salgado, desarrollador de software especializado en React, TypeScript, Node.js y PostgreSQL',
         url: 'https://maykolsalgado.me',
         sameAs: [
           'https://github.com/mayk0l',

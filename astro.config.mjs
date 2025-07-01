@@ -4,6 +4,8 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://maykolsalgado.me',
+  base: '/',
+  trailingSlash: 'ignore',
   integrations: [
     sitemap({
       changefreq: 'weekly',
@@ -28,6 +30,8 @@ export default defineConfig({
   },
   build: {
     inlineStylesheets: 'auto',
+    assets: '_astro'
   },
-  compressHTML: true,
+  output: 'static',
+  compressHTML: true
 });

@@ -10,17 +10,44 @@ const { enabled = true, path = '/sw.js' } = Astro.props;
 
 {enabled && (
   <script define:vars={{ path }}>
-    // Register Service Worker
+    // Register Service Worker con mejor manejo de errores
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register(path)
           .then((registration) => {
-            console.log('SW registered: ', registration);
+            console.log('SW registered successfully:', registration);
+            
+            // Escuchar actualizaciones del SW
+            registration.addEventListener('updatefound', () => {
+              const newWorker = registration.installing;
+              if (newWorker) {
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    console.log('Nueva versión del SW disponible');
+                    // Opcionalmente mostrar notificación de actualización
+                  }
+                });
+              }
+            });
           })
           .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
+            console.warn('SW registration failed:', registrationError);
+            // No bloquear la aplicación si el SW falla
           });
       });
+
+      // Manejar mensajes del Service Worker
+      navigator.serviceWorker.addEventListener('message', (event) => {
+        console.log('Mensaje del SW:', event.data);
+      });
+
+      // Detectar cuando el SW está controlando la página
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        console.log('SW controller changed');
+        // Opcionalmente recargar la página para usar la nueva versión
+      });
+    } else {
+      console.warn('Service Workers no son soportados en este navegador');
     }
     
     // Performance observer for Core Web Vitals

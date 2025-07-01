@@ -1,45 +1,61 @@
-// Service Worker para cache y performance
-const CACHE_NAME = 'maykolsalgado-v1';
+// Service Worker para cache y performance - Mejorado para móviles
+const CACHE_NAME = 'maykolsalgado-v3';
 const STATIC_ASSETS = [
   '/',
   '/projects',
   '/blog',
+  '/404.html',
   '/logo.svg',
   '/favicon.svg',
+  '/favicon.ico',
   '/images/og-maykol-salgado.svg'
 ];
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
+  console.log('Service Worker installing...');
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
+        console.log('Caching static assets...');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
+        console.log('Service Worker installed successfully');
         return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Service Worker install failed:', error);
       })
   );
 });
 
 // Activate event - cleanup old caches
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker activating...');
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames
             .filter((cacheName) => cacheName !== CACHE_NAME)
-            .map((cacheName) => caches.delete(cacheName))
+            .map((cacheName) => {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            })
         );
       })
       .then(() => {
+        console.log('Service Worker activated successfully');
         return self.clients.claim();
+      })
+      .catch((error) => {
+        console.error('Service Worker activation failed:', error);
       })
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - estrategia Network First para páginas, Cache First para assets
 self.addEventListener('fetch', (event) => {
   // Skip non-GET requests
   if (event.request.method !== 'GET') return;
@@ -47,36 +63,76 @@ self.addEventListener('fetch', (event) => {
   // Skip external requests
   if (!event.request.url.startsWith(self.location.origin)) return;
   
-  event.respondWith(
-    caches.match(event.request)
-      .then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-        
-        return fetch(event.request)
-          .then((response) => {
-            // Don't cache non-successful responses
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-            
-            // Clone the response
+  // Skip requests with query parameters (pueden ser dinámicas)
+  const url = new URL(event.request.url);
+  if (url.search) return;
+  
+  console.log('SW handling request:', event.request.url);
+  
+  // Estrategia diferente para páginas vs assets
+  if (event.request.destination === 'document') {
+    // Network First para páginas HTML
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response && response.status === 200) {
             const responseToCache = response.clone();
-            
             caches.open(CACHE_NAME)
               .then((cache) => {
                 cache.put(event.request, responseToCache);
               });
-            
-            return response;
-          })
-          .catch(() => {
-            // Return offline page if available
-            if (event.request.destination === 'document') {
-              return caches.match('/');
-            }
-          });
-      })
-  );
+          }
+          return response;
+        })
+        .catch(() => {
+          console.log('Network failed, trying cache for:', event.request.url);
+          return caches.match(event.request)
+            .then((cachedResponse) => {
+              if (cachedResponse) {
+                return cachedResponse;
+              }
+              // Fallback específico para páginas principales
+              if (event.request.url.includes('/projects')) {
+                return caches.match('/projects');
+              }
+              if (event.request.url.includes('/blog')) {
+                return caches.match('/blog');
+              }
+              // Fallback final a página 404 personalizada
+              return caches.match('/404.html').then(fallback => {
+                return fallback || caches.match('/');
+              });
+            });
+        })
+    );
+  } else {
+    // Cache First para assets (CSS, JS, imágenes)
+    event.respondWith(
+      caches.match(event.request)
+        .then((cachedResponse) => {
+          if (cachedResponse) {
+            return cachedResponse;
+          }
+          
+          return fetch(event.request)
+            .then((response) => {
+              if (!response || response.status !== 200 || response.type !== 'basic') {
+                return response;
+              }
+              
+              const responseToCache = response.clone();
+              caches.open(CACHE_NAME)
+                .then((cache) => {
+                  cache.put(event.request, responseToCache);
+                });
+              
+              return response;
+            })
+            .catch((error) => {
+              console.error('Fetch failed for asset:', event.request.url, error);
+              return new Response('Asset not available offline', { status: 503 });
+            });
+        })
+    );
+  }
 });

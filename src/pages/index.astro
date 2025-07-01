@@ -12,8 +12,8 @@ const analytics = getAnalyticsConfig(import.meta.env.DEV);
 // SEO metadata
 const seoData = {
   title: "Maykol Salgado - Desarrollador Fullstack | React, TypeScript, Node.js",
-  description: "Desarrollador de software fullstack especializado en React, TypeScript, Node.js y PostgreSQL. Creo soluciones modernas y eficientes para pymes y startups en Chile y LATAM.",
-  keywords: "desarrollador fullstack, react, typescript, nodejs, postgresql, chile, software para pymes, desarrollador chile, programador fullstack, astro, tailwindcss, maykol salgado",
+  description: "Maykol Salgado, desarrollador de software fullstack especializado en React, TypeScript, Node.js y PostgreSQL. Creo soluciones modernas y eficientes para pymes y startups en Chile y LATAM.",
+  keywords: "Maykol Salgado, maykol salgado, maykolsalgado, desarrollador fullstack, react, typescript, nodejs, postgresql, chile, software para pymes, desarrollador chile, programador fullstack, astro, tailwindcss, maykol salgado desarrollador",
   url: "https://maykolsalgado.me/",
   image: "https://maykolsalgado.me/images/og-maykol-salgado.svg",
   type: "website",
@@ -737,4 +737,31 @@ const seoData = {
       transform: none;
     }
   }
+
+  /* Contenido SEO adicional (oculto visualmente) */
+  .seo-content {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
 </style>
+
+<!-- Contenido adicional para SEO (invisible) -->
+<div class="seo-content">
+  <h2>Maykol Salgado - Información de contacto</h2>
+  <p>Maykol Salgado desarrollador fullstack</p>
+  <p>Maykol Nicolás Salgado desarrollador</p>
+  <p>Contacto Maykol Salgado: maykol@maykolsalgado.me</p>
+  <p>Teléfono Maykol Salgado: +56 9 7243 8969</p>
+  <p>Maykol Salgado programador Chile</p>
+  <p>Maykol Salgado portfolio</p>
+  <address>
+    Maykol Salgado
+    Desarrollador Fullstack
+    Chile
+    maykol@maykolsalgado.me
+    https://maykolsalgado.me
+  </address>
+</div>

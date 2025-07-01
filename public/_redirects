@@ -1,0 +1,10 @@
+# Redirects para Netlify/Vercel
+# Manejo de rutas SPA
+
+# Rutas principales
+/projects /projects.html 200
+/blog /blog/index.html 200
+/blog/* /blog/:splat 200
+
+# Fallback para rutas no encontradas
+/* /index.html 200
