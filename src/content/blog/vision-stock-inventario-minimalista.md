@@ -14,7 +14,8 @@ tags:
   - mongodb
   - inventario
   - minimalismo
-coverImage: ''
+coverImage: >-
+  https://res.cloudinary.com/de5auto5x/image/upload/v1751360459/portfolio-blog/j34oyisuizavaqxfbo9g.webp
 draft: false
 ---
 # Organizando el caos: por qué hice Vision Stock y cómo lo uso en mis propios proyectos
