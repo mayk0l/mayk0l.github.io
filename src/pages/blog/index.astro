@@ -8,6 +8,21 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 const posts: CollectionEntry<'blog'>[] = await getCollection('blog');
 
+// SEO para la página del blog
+const seoData = {
+  title: "Blog Técnico - Maykol Salgado | Desarrollo Fullstack y Tecnología",
+  description: "Blog técnico con tutoriales, experiencias y mejores prácticas de desarrollo fullstack moderno. React, TypeScript, Node.js, PostgreSQL y más tecnologías actuales.",
+  keywords: "blog desarrollo, tutoriales react, typescript tips, nodejs blog, postgresql, desarrollo fullstack, blog técnico chile, maykol salgado blog",
+  url: "https://maykolsalgado.me/blog",
+  image: "https://maykolsalgado.me/images/primer-post-800x600.webp",
+  type: "website"
+};
+
+const breadcrumbs = [
+  { name: "Inicio", url: "https://maykolsalgado.me/" },
+  { name: "Blog", url: "https://maykolsalgado.me/blog" }
+];
+
 // Formatear fecha
 const formatDate = (date: Date) => {
   return new Intl.DateTimeFormat('es-ES', {
@@ -18,7 +33,7 @@ const formatDate = (date: Date) => {
 };
 ---
 
-<MainLayout title="Blog Técnico - Maykol Salgado">
+<MainLayout {...seoData} breadcrumbs={breadcrumbs}>
   <!-- Hero Section del Blog -->
   <section class="min-h-[60vh] flex items-center justify-center px-4 pt-16">
     <div class="max-w-4xl mx-auto text-center">

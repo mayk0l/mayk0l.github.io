@@ -1,0 +1,58 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ytLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="800" height="800" rx="80" fill="url(#bgGradient)" />
+  
+  <!-- Círculo decorativo de fondo -->
+  <circle cx="400" cy="400" r="320" fill="url(#ytLogoGradient)" opacity="0.1" />
+  
+  <!-- Ícono de código principal -->
+  <g transform="translate(300, 300)">
+    <!-- Fondo del ícono -->
+    <rect width="200" height="200" rx="30" fill="url(#ytLogoGradient)" />
+    
+    <!-- Ventana del navegador -->
+    <rect x="25" y="40" width="150" height="120" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="3"/>
+    
+    <!-- Barra superior del navegador -->
+    <rect x="25" y="40" width="150" height="25" rx="12" fill="rgba(255,255,255,0.15)"/>
+    
+    <!-- Botones de ventana -->
+    <circle cx="45" cy="52.5" r="5" fill="#ef4444"/>
+    <circle cx="65" cy="52.5" r="5" fill="#f59e0b"/>
+    <circle cx="85" cy="52.5" r="5" fill="#10b981"/>
+    
+    <!-- Código: etiqueta de apertura -->
+    <path d="M70 90 L50 110 L70 130" stroke="rgba(255,255,255,0.95)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <!-- Código: etiqueta de cierre -->
+    <path d="M130 90 L150 110 L130 130" stroke="rgba(255,255,255,0.95)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <!-- Código: slash -->
+    <path d="M110 80 L90 140" stroke="rgba(255,255,255,0.8)" stroke-width="6" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <!-- Texto debajo del ícono -->
+  <text x="400" y="580" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700" fill="white" text-anchor="middle">
+    Maykol Salgado
+  </text>
+  
+  <!-- Subtítulo -->
+  <text x="400" y="620" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="400" fill="rgba(255,255,255,0.7)" text-anchor="middle">
+    Full Stack Developer
+  </text>
+  
+  <!-- Línea decorativa -->
+  <rect x="300" y="640" width="200" height="3" rx="1.5" fill="url(#ytLogoGradient)" />
+</svg>

@@ -4,74 +4,24 @@ import Button from '../components/Button.astro';
 import Card from '../components/Card.astro';
 import Section from '../components/Section.astro';
 import SocialLinks from '../components/SocialLinks.astro';
+import { getAnalyticsConfig } from '../config/analytics';
+
+// Configuración de analytics
+const analytics = getAnalyticsConfig(import.meta.env.DEV);
 
 // SEO metadata
-const title = "Maykol Salgado - Desarrollador Fullstack | React, TypeScript, Node.js";
-const description = "Desarrollador de software fullstack especializado en React, TypeScript, Node.js y PostgreSQL. Creo soluciones modernas y eficientes para pymes y startups en Chile y LATAM.";
-const keywords = "desarrollador fullstack, react, typescript, nodejs, postgresql, chile, software para pymes, desarrollador chile, programador fullstack, astro, tailwindcss";
+const seoData = {
+  title: "Maykol Salgado - Desarrollador Fullstack | React, TypeScript, Node.js",
+  description: "Desarrollador de software fullstack especializado en React, TypeScript, Node.js y PostgreSQL. Creo soluciones modernas y eficientes para pymes y startups en Chile y LATAM.",
+  keywords: "desarrollador fullstack, react, typescript, nodejs, postgresql, chile, software para pymes, desarrollador chile, programador fullstack, astro, tailwindcss, maykol salgado",
+  url: "https://maykolsalgado.me/",
+  image: "https://maykolsalgado.me/images/og-maykol-salgado.svg",
+  type: "website",
+  analytics
+};
 ---
 
-<MainLayout title={title}>
-  <Fragment slot="head">
-    <!-- SEO Meta Tags -->
-    <meta name="description" content={description} />
-    <meta name="keywords" content={keywords} />
-    <meta name="author" content="Maykol Salgado" />
-    <meta name="robots" content="index, follow" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://maykolsalgado.me/" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://maykolsalgado.me/images/og-maykol-salgado.svg" />
-    <meta property="og:site_name" content="Maykol Salgado - Desarrollador Fullstack" />
-    <meta property="og:locale" content="es_CL" />
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@mayk0ldev" />
-    <meta name="twitter:creator" content="@mayk0ldev" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://maykolsalgado.me/images/og-maykol-salgado.svg" />
-    
-    <!-- Additional SEO -->
-    <link rel="canonical" href="https://maykolsalgado.me/" />
-    <meta name="geo.region" content="CL" />
-    <meta name="geo.country" content="Chile" />
-    <meta name="language" content="es" />
-    
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Maykol Salgado",
-      "jobTitle": "Desarrollador Fullstack",
-      "description": "Desarrollador de software especializado en React, TypeScript, Node.js y PostgreSQL",
-      "url": "https://maykolsalgado.me",
-      "sameAs": [
-        "https://github.com/mayk0l",
-        "https://linkedin.com/in/maykol-nicolas-salgado-ramos-788366371",
-        "https://twitter.com/mayk0ldev"
-      ],
-      "knowsAbout": [
-        "React", "TypeScript", "Node.js", "PostgreSQL", "JavaScript", 
-        "Web Development", "Fullstack Development", "Software Engineering"
-      ],
-      "workLocation": {
-        "@type": "Place",
-        "name": "Chile"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "maykol@maykolsalgado.me",
-        "contactType": "professional"
-      }
-    }
-    </script>
-  </Fragment>
+<MainLayout {...seoData}>
   <!-- Hero Section -->
   <section class="min-h-[85vh] flex items-center justify-center px-4 pt-20">
     <div class="max-w-4xl mx-auto text-center">

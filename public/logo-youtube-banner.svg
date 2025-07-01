@@ -1,0 +1,87 @@
+<svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo principal con gradiente -->
+  <rect width="800" height="200" fill="url(#backgroundGradient)" />
+  
+  <!-- Pattern de fondo sutil -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="200" fill="url(#grid)" />
+  
+  <!-- Logo principal centrado -->
+  <g transform="translate(100, 50)">
+    <!-- Fondo del logo con sombra -->
+    <rect x="-5" y="-5" width="110" height="110" rx="25" fill="rgba(0,0,0,0.3)" />
+    <rect width="100" height="100" rx="20" fill="url(#logoGradient)" />
+    
+    <!-- "M" estilizada más detallada -->
+    <path d="M20 80V20h12L44 56L56 20H68v60h-8.4V37.2L51.6 60h-4.2L39 37.2V80H20z" 
+          fill="white" 
+          stroke="rgba(255,255,255,0.3)" 
+          stroke-width="1"/>
+    
+    <!-- Efectos de brillo -->
+    <rect width="100" height="40" rx="20" fill="url(#shine)" opacity="0.3" />
+  </g>
+  
+  <!-- Texto principal -->
+  <g transform="translate(250, 70)">
+    <text x="0" y="40" 
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" 
+          font-size="48" 
+          font-weight="800" 
+          fill="white"
+          letter-spacing="-1px">
+      MAYKOL SALGADO
+    </text>
+    <text x="0" y="70" 
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" 
+          font-size="18" 
+          font-weight="500" 
+          fill="#94a3b8"
+          letter-spacing="2px">
+      DESARROLLADOR FULLSTACK
+    </text>
+  </g>
+  
+  <!-- Elementos decorativos -->
+  <circle cx="650" cy="50" r="30" fill="rgba(6, 182, 212, 0.2)" />
+  <circle cx="720" cy="120" r="20" fill="rgba(8, 145, 178, 0.3)" />
+  <circle cx="50" cy="150" r="25" fill="rgba(14, 165, 233, 0.15)" />
+  
+  <!-- Código decorativo -->
+  <g transform="translate(450, 120)" opacity="0.4">
+    <rect x="0" y="0" width="300" height="60" rx="8" fill="rgba(0,0,0,0.5)" />
+    <text x="15" y="20" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" fill="#06b6d4">const</text>
+    <text x="55" y="20" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" fill="#f8fafc">developer = {</text>
+    <text x="25" y="35" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" fill="#f8fafc">stack:</text>
+    <text x="70" y="35" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" fill="#10b981">["React", "TypeScript", "Node.js"]</text>
+    <text x="15" y="50" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" fill="#f8fafc">};</text>
+  </g>
+  
+  <!-- Gradientes y efectos -->
+  <defs>
+    <!-- Gradiente de fondo -->
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    
+    <!-- Gradiente del logo -->
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    
+    <!-- Efecto de brillo -->
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+      <stop offset="50%" stop-color="rgba(255,255,255,0.8)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+  </defs>
+</svg>

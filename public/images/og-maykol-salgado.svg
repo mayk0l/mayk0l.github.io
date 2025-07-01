@@ -1,0 +1,68 @@
+<!-- Este es un placeholder SVG para la imagen OG -->
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo con gradiente -->
+  <rect width="1200" height="630" fill="url(#backgroundGradient)" />
+  
+  <!-- Grid pattern sutil -->
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)" />
+  
+  <!-- Contenido principal -->
+  <g transform="translate(100, 150)">
+    <!-- Logo/Avatar placeholder -->
+    <circle cx="80" cy="80" r="50" fill="url(#avatarGradient)" />
+    <text x="80" y="95" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="bold" fill="white">MS</text>
+    
+    <!-- Texto principal -->
+    <text x="180" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="bold" fill="white">
+      Maykol Salgado
+    </text>
+    <text x="180" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#94a3b8">
+      Desarrollador Fullstack
+    </text>
+    <text x="180" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#64748b">
+      React • TypeScript • Node.js • PostgreSQL
+    </text>
+  </g>
+  
+  <!-- Elementos decorativos -->
+  <circle cx="1000" cy="100" r="40" fill="rgba(6, 182, 212, 0.2)" />
+  <circle cx="1080" cy="180" r="25" fill="rgba(8, 145, 178, 0.3)" />
+  <circle cx="150" cy="500" r="60" fill="rgba(14, 165, 233, 0.15)" />
+  
+  <!-- Código decorativo -->
+  <g transform="translate(700, 250)" opacity="0.3">
+    <rect x="0" y="0" width="400" height="200" rx="8" fill="rgba(0,0,0,0.5)" />
+    <text x="20" y="30" font-family="'JetBrains Mono', monospace" font-size="14" fill="#06b6d4">const</text>
+    <text x="80" y="30" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f8fafc">developer = {</text>
+    <text x="40" y="55" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f8fafc">name:</text>
+    <text x="100" y="55" font-family="'JetBrains Mono', monospace" font-size="14" fill="#10b981">"Maykol Salgado"</text>
+    <text x="230" y="55" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f8fafc">,</text>
+    <text x="40" y="80" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f8fafc">stack:</text>
+    <text x="100" y="80" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f8fafc">[</text>
+    <text x="120" y="80" font-family="'JetBrains Mono', monospace" font-size="14" fill="#10b981">"React"</text>
+    <text x="190" y="80" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f8fafc">,</text>
+    <text x="210" y="80" font-family="'JetBrains Mono', monospace" font-size="14" fill="#10b981">"TypeScript"</text>
+    <text x="320" y="80" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f8fafc">],</text>
+    <text x="40" y="105" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f8fafc">focus:</text>
+    <text x="100" y="105" font-family="'JetBrains Mono', monospace" font-size="14" fill="#10b981">"soluciones reales"</text>
+    <text x="20" y="130" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f8fafc">};</text>
+  </g>
+  
+  <!-- Gradientes -->
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    <linearGradient id="avatarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0891b2" />
+    </linearGradient>
+  </defs>
+</svg>

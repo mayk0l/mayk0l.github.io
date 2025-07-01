@@ -5,6 +5,21 @@ import Section from '../components/Section.astro';
 import Button from '../components/Button.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 
+// SEO para la página de proyectos
+const seoData = {
+  title: "Proyectos - Maykol Salgado | Desarrollos React, TypeScript y IA",
+  description: "Descubre mis proyectos de desarrollo fullstack: CajaPyme (gestión financiera), Contratos Agent (IA legal), TakiQR (menús digitales) y más. React, TypeScript, Node.js, PostgreSQL.",
+  keywords: "proyectos desarrollador, react projects, typescript projects, cajapyme, contratos agent, takiqr, vision stock, desarrollos chile, portfolio maykol salgado",
+  url: "https://maykolsalgado.me/projects",
+  image: "https://maykolsalgado.me/images/cajapyme-800x600.webp",
+  type: "website"
+};
+
+const breadcrumbs = [
+  { name: "Inicio", url: "https://maykolsalgado.me/" },
+  { name: "Proyectos", url: "https://maykolsalgado.me/projects" }
+];
+
 // Proyectos reales basados en el perfil de GitHub
 const projects = [
   {
@@ -163,7 +178,7 @@ const projectStats = {
 };
 ---
 
-<MainLayout title="Proyectos - Desarrollador Fullstack">
+<MainLayout {...seoData} breadcrumbs={breadcrumbs}>
   <!-- Hero Section -->
   <section class="min-h-[60vh] flex items-center justify-center px-4 pt-16">
     <div class="max-w-4xl mx-auto text-center">

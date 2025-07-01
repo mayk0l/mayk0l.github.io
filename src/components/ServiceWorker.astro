@@ -1,0 +1,58 @@
+---
+// Service Worker Registration Component
+export interface ServiceWorkerProps {
+  enabled?: boolean;
+  path?: string;
+}
+
+const { enabled = true, path = '/sw.js' } = Astro.props;
+---
+
+{enabled && (
+  <script define:vars={{ path }}>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register(path)
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+    
+    // Performance observer for Core Web Vitals
+    if ('PerformanceObserver' in window) {
+      // Largest Contentful Paint (LCP)
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+        }
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
+      
+      // First Input Delay (FID)
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      }).observe({ entryTypes: ['first-input'] });
+      
+      // Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        }
+        console.log('CLS:', clsValue);
+      }).observe({ entryTypes: ['layout-shift'] });
+    }
+  </script>
+)}

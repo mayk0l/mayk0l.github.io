@@ -1,0 +1,27 @@
+{
+  "name": "Maykol Salgado - Desarrollador Fullstack",
+  "short_name": "Maykol Salgado",
+  "description": "Desarrollador de software fullstack especializado en React, TypeScript, Node.js y PostgreSQL",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0891b2",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es",
+  "categories": ["business", "productivity", "technology"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
