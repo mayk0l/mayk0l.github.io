@@ -3,8 +3,8 @@
 
 export const analyticsConfig = {
   // Google Analytics GA4
-  gtag: 'G-XXXXXXXXXX', // Reemplaza con tu código real
-  gtagEnabled: false, // Cambiar a true cuando tengas el código
+  gtag: 'G-NVMB7Z5B56', // ✅ Código GA4 configurado
+  gtagEnabled: true, // ✅ Activado
   
   // Google Search Console
   searchConsoleEnabled: true, // ✅ Activado
