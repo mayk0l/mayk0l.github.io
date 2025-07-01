@@ -43,19 +43,19 @@ const formatDate = (date: Date) => {
 
 <MainLayout {...seoData} breadcrumbs={breadcrumbs}>
   <!-- Hero Section del Blog -->
-  <section class="min-h-[60vh] flex items-center justify-center px-4 pt-16">
+  <section class="min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh] flex items-center justify-center px-4 pt-4 sm:pt-8 md:pt-16">
     <div class="max-w-4xl mx-auto text-center">
       <div class="fade-in-up">
-        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
           <span class="gradientStart">Blog Técnico</span>
         </h1>
-        <h2 class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 font-light">
+        <h2 class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 font-light px-2">
           Conocimiento <span class="gradientHighlight font-medium">Práctico</span> para Desarrolladores
         </h2>
       </div>
       
       <div class="fade-in-up animate-delay-200">
-        <p class="text-base sm:text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed px-4">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-2 sm:px-4">
           Comparto experiencias, tutoriales y mejores prácticas del desarrollo 
           <span class="text-white font-medium">fullstack moderno</span>. 
           Contenido técnico sin rodeos, directo al grano.
@@ -72,22 +72,22 @@ const formatDate = (date: Date) => {
 
   <!-- Estadísticas del Blog -->
   <Section spacing="lg">
-    <div class="fade-in-up grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div class="fade-in-up grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center px-2">
       <div>
-        <div class="text-2xl md:text-3xl font-bold gradientStart mb-2">{posts.length}+</div>
-        <div class="text-sm text-gray-400 uppercase tracking-wider">Artículos</div>
+        <div class="text-xl sm:text-2xl md:text-3xl font-bold gradientStart mb-2">{posts.length}+</div>
+        <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Artículos</div>
       </div>
       <div>
-        <div class="text-2xl md:text-3xl font-bold gradientStart mb-2">50%</div>
-        <div class="text-sm text-gray-400 uppercase tracking-wider">Teórico</div>
+        <div class="text-xl sm:text-2xl md:text-3xl font-bold gradientStart mb-2">50%</div>
+        <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Teórico</div>
       </div>
       <div>
-        <div class="text-2xl md:text-3xl font-bold gradientStart mb-2">50%</div>
-        <div class="text-sm text-gray-400 uppercase tracking-wider">Práctico</div>
+        <div class="text-xl sm:text-2xl md:text-3xl font-bold gradientStart mb-2">50%</div>
+        <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Práctico</div>
       </div>
       <div>
-        <div class="text-2xl md:text-3xl font-bold gradientStart mb-2">∞</div>
-        <div class="text-sm text-gray-400 uppercase tracking-wider">Aprendizaje</div>
+        <div class="text-xl sm:text-2xl md:text-3xl font-bold gradientStart mb-2">∞</div>
+        <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Aprendizaje</div>
       </div>
     </div>
   </Section>
