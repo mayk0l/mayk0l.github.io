@@ -82,7 +82,7 @@ mi-portafolio/
 - **Portfolio**: [maykol.vercel.app](https://maykol.vercel.app)
 - **GitHub**: [@mayk0l](https://github.com/mayk0l)
 - **LinkedIn**: [Maykol Salgado](https://www.linkedin.com/in/maykol-nicolas-salgado-ramos-788366371/)
-- **Email**: maykol.salgado@proton.me
+- **Email**: maykolsalgado@proton.me
 
 ## 📊 Datos Reales
 

@@ -94,7 +94,7 @@ export function generateStructuredData(type: 'Person' | 'WebPage' | 'Article' | 
         },
         contactPoint: {
           '@type': 'ContactPoint',
-          email: 'maykol@maykolsalgado.me',
+          email: 'maykolsalgado@proton.me',
           contactType: 'professional'
         },
         ...data
@@ -187,7 +187,7 @@ export function generateStructuredData(type: 'Person' | 'WebPage' | 'Article' | 
         },
         contactPoint: {
           '@type': 'ContactPoint',
-          email: 'maykol@maykolsalgado.me',
+          email: 'maykolsalgado@proton.me',
           contactType: 'customer service',
           areaServed: ['CL', 'LATAM'],
           availableLanguage: ['Spanish', 'English']

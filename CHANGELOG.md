@@ -71,7 +71,7 @@
 - **Empresa**: Fundador y CEO de Gelic Network
 - **Filosofía**: "La única forma de hacer un proyecto... es HACER el proyecto"
 - **Ubicación**: Limache, Valparaíso, Chile
-- **Contacto**: maykol.salgado@proton.me
+- **Contacto**: maykolsalgado@proton.me
 
 ### 🔗 Enlaces de Proyectos
 - GitHub: https://github.com/mayk0l/CajaPyme
