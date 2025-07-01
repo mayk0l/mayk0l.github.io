@@ -1,16 +1,552 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+import Section from '../components/Section.astro';
+import SocialLinks from '../components/SocialLinks.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Desarrollador Fullstack Freelance">
+  <!-- Hero Section -->
+  <section class="min-h-[85vh] flex items-center justify-center px-4 pt-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Título principal -->
+      <div class="fade-in-up">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <span class="gradientStart"><span class="gradientHighlight">Maykol</span> Salgado</span>
+        </h1>
+        <h2 class="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 font-light">
+          Desarrollador <span class="gradientHighlight font-medium">Fullstack</span> Freelance
+        </h2>
+      </div>
+      
+      <!-- Descripción -->
+      <div class="fade-in-up animate-delay-200">
+        <p class="text-base sm:text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed px-4">
+          Desarrollador especializado en crear soluciones web para <span class="text-white font-medium">pequeñas empresas chilenas</span>. 
+          Fundador y CEO de Gelic Network, con enfoque en proyectos que generen 
+          <span class="text-white font-medium">impacto real</span> usando tecnologías modernas.
+        </p>
+      </div>
+      
+      <!-- CTAs -->
+      <div class="fade-in-up animate-delay-400 flex flex-col sm:flex-row gap-4 justify-center px-4">
+        <Button variant="primary" size="lg" href="/blog">
+          Ver Mi Blog Técnico
+        </Button>
+        <Button variant="outline" size="lg" href="#contacto">
+          Hablemos de Tu Proyecto
+        </Button>
+      </div>
+      
+      <!-- Estadísticas -->
+      <div class="fade-in-up animate-delay-600 mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center px-4">
+        <div>
+          <div class="text-2xl sm:text-3xl md:text-4xl font-bold gradientStart mb-2">2+</div>
+          <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Años Experiencia</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl md:text-4xl font-bold gradientStart mb-2">6+</div>
+          <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Proyectos Completados</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl md:text-4xl font-bold gradientStart mb-2">72</div>
+          <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Contribuciones/Año</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl md:text-4xl font-bold gradientStart mb-2">100%</div>
+          <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Compromiso</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Mí -->
+  <Section title="¿Quién Soy?" subtitle="Conóceme" spacing="xl" id="sobre-mi">
+    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div class="fade-in-left">
+        <p class="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed">
+          Soy un desarrollador fullstack apasionado por crear soluciones que realmente impacten en los negocios. 
+          Con más de 5 años de experiencia, me especializo en transformar ideas complejas en aplicaciones web robustas y escalables.
+        </p>
+        <p class="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed">
+          Mi enfoque se centra en entender primero tu negocio para luego construir la tecnología que necesitas. 
+          No solo desarrollo código, sino que diseño estrategias tecnológicas que impulsan el crecimiento.
+        </p>
+        
+        <!-- Valores -->
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <div>
+              <h4 class="text-white font-medium mb-1 text-sm sm:text-base">Comunicación Clara</h4>
+              <p class="text-gray-400 text-xs sm:text-sm">Mantengo informado a mis clientes en cada etapa del proyecto</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <div>
+              <h4 class="text-white font-medium mb-1 text-sm sm:text-base">Calidad Garantizada</h4>
+              <p class="text-gray-400 text-xs sm:text-sm">Código limpio, probado y documentado en cada entrega</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <div>
+              <h4 class="text-white font-medium mb-1 text-sm sm:text-base">Resultados Medibles</h4>
+              <p class="text-gray-400 text-xs sm:text-sm">Enfoque en métricas que importan para tu negocio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="fade-in-right">
+        <Card variant="featured" padding="lg">
+          <div class="text-center">
+            <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6 bg-gradient-to-br from-slate-600 to-slate-800 rounded-full flex items-center justify-center">
+              <svg class="w-12 h-12 sm:w-16 sm:h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold gradientStart mb-4">Mi Filosofía</h3>
+            <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+              "La única forma de hacer un proyecto... es HACER el proyecto. 
+              No basta con planificar, imaginar o leer. Solo avanzando paso a paso, 
+              línea a línea, entrega a entrega, lo vas a lograr."
+            </p>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Stack Tecnológico -->
+  <Section title="Stack Tecnológico" subtitle="Herramientas" spacing="xl">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <!-- Backend -->
+      <div class="fade-in-up">
+        <Card variant="default" padding="lg">
+          <div class="text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <!-- Node.js Icon (más específico) -->
+              <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.570,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.275-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Backend</h3>
+            <p class="text-gray-400 text-xs sm:text-sm mb-4">APIs robustas y escalables</p>
+            <div class="flex flex-wrap gap-1 sm:gap-2 justify-center">
+              <span class="px-2 py-1 text-xs bg-green-600/20 text-green-400 rounded border border-green-600/30">Node.js</span>
+              <span class="px-2 py-1 text-xs bg-blue-600/20 text-blue-400 rounded border border-blue-600/30">TypeScript</span>
+              <span class="px-2 py-1 text-xs bg-yellow-600/20 text-yellow-400 rounded border border-yellow-600/30">Express</span>
+              <span class="px-2 py-1 text-xs bg-purple-600/20 text-purple-400 rounded border border-purple-600/30">Prisma</span>
+              <span class="px-2 py-1 text-xs bg-blue-700/20 text-blue-300 rounded border border-blue-700/30">PostgreSQL</span>
+              <span class="px-2 py-1 text-xs bg-green-700/20 text-green-300 rounded border border-green-700/30">JWT</span>
+            </div>
+          </div>
+        </Card>
+      </div>
+
+      <!-- Frontend -->
+      <div class="fade-in-up animate-delay-200">
+        <Card variant="default" padding="lg">
+          <div class="text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <!-- React Icon (más específico) -->
+              <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.36-.034-.471 0-.92.01-1.36.034.44-.572.895-1.096 1.36-1.564zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.866.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.36.034.47 0 .92-.01 1.36-.034-.44.572-.895 1.095-1.36 1.563-.465-.468-.92-.99-1.36-1.563z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Frontend</h3>
+            <p class="text-gray-400 text-xs sm:text-sm mb-4">Interfaces modernas y responsivas</p>
+            <div class="flex flex-wrap gap-1 sm:gap-2 justify-center">
+              <span class="px-2 py-1 text-xs bg-cyan-600/20 text-cyan-400 rounded border border-cyan-600/30">React</span>
+              <span class="px-2 py-1 text-xs bg-blue-600/20 text-blue-400 rounded border border-blue-600/30">TypeScript</span>
+              <span class="px-2 py-1 text-xs bg-orange-600/20 text-orange-400 rounded border border-orange-600/30">Astro</span>
+              <span class="px-2 py-1 text-xs bg-teal-600/20 text-teal-400 rounded border border-teal-600/30">TailwindCSS</span>
+              <span class="px-2 py-1 text-xs bg-purple-600/20 text-purple-400 rounded border border-purple-600/30">Vite</span>
+              <span class="px-2 py-1 text-xs bg-amber-600/20 text-amber-400 rounded border border-amber-600/30">Zustand</span>
+            </div>
+          </div>
+        </Card>
+      </div>
+
+      <!-- Base de Datos -->
+      <div class="fade-in-up animate-delay-400">
+        <Card variant="default" padding="lg">
+          <div class="text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <!-- Database Icon (cilindros apilados más representativo) -->
+              <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"></path>
+                <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Base de Datos</h3>
+            <p class="text-gray-400 text-xs sm:text-sm mb-4">Almacenamiento confiable</p>
+            <div class="flex flex-wrap gap-1 sm:gap-2 justify-center">
+              <span class="px-2 py-1 text-xs bg-blue-600/20 text-blue-400 rounded border border-blue-600/30">PostgreSQL</span>
+              <span class="px-2 py-1 text-xs bg-yellow-600/20 text-yellow-400 rounded border border-yellow-600/30">MySQL</span>
+              <span class="px-2 py-1 text-xs bg-green-600/20 text-green-400 rounded border border-green-600/30">MongoDB</span>
+              <span class="px-2 py-1 text-xs bg-purple-600/20 text-purple-400 rounded border border-purple-600/30">Prisma</span>
+            </div>
+          </div>
+        </Card>
+      </div>
+
+      <!-- DevOps -->
+      <div class="fade-in-up animate-delay-600">
+        <Card variant="default" padding="lg">
+          <div class="text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <!-- Docker Icon -->
+              <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.888c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338 0-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">DevOps</h3>
+            <p class="text-gray-400 text-xs sm:text-sm mb-4">Despliegue y monitoreo</p>
+            <div class="flex flex-wrap gap-1 sm:gap-2 justify-center">
+              <span class="px-2 py-1 text-xs bg-purple-600/20 text-purple-400 rounded border border-purple-600/30">Vercel</span>
+              <span class="px-2 py-1 text-xs bg-orange-600/20 text-orange-400 rounded border border-orange-600/30">Railway</span>
+              <span class="px-2 py-1 text-xs bg-green-600/20 text-green-400 rounded border border-green-600/30">GitHub Actions</span>
+              <span class="px-2 py-1 text-xs bg-gray-600/20 text-gray-400 rounded border border-gray-600/30">Git</span>
+            </div>
+          </div>
+        </Card>
+      </div>
+
+      <!-- Metodologías -->
+      <div class="fade-in-up animate-delay-800">
+        <Card variant="default" padding="lg">
+          <div class="text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 bg-gradient-to-br from-purple-600 to-indigo-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <!-- Agile/Scrum Icon -->
+              <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Metodologías</h3>
+            <p class="text-gray-400 text-xs sm:text-sm mb-4">Mejores prácticas</p>
+            <div class="flex flex-wrap gap-1 sm:gap-2 justify-center">
+              <span class="px-2 py-1 text-xs bg-red-600/20 text-red-400 rounded border border-red-600/30">Testing</span>
+              <span class="px-2 py-1 text-xs bg-blue-600/20 text-blue-400 rounded border border-blue-600/30">Agile</span>
+              <span class="px-2 py-1 text-xs bg-green-600/20 text-green-400 rounded border border-green-600/30">Clean Code</span>
+              <span class="px-2 py-1 text-xs bg-purple-600/20 text-purple-400 rounded border border-purple-600/30">REST API</span>
+              <span class="px-2 py-1 text-xs bg-yellow-600/20 text-yellow-400 rounded border border-yellow-600/30">Zod</span>
+            </div>
+          </div>
+        </Card>
+      </div>
+
+      <!-- Especialidades -->
+      <div class="fade-in-up animate-delay-1000">
+        <Card variant="featured" padding="lg">
+          <div class="text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 bg-gradient-to-br from-indigo-600 to-purple-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <!-- Full Stack Icon -->
+              <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Mi Especialidad</h3>
+            <p class="text-gray-400 text-xs sm:text-sm mb-4">Lo que me apasiona</p>
+            <div class="flex flex-wrap gap-1 sm:gap-2 justify-center">
+              <span class="px-2 py-1 text-xs bg-gradient-to-r from-indigo-600/20 to-purple-600/20 text-indigo-300 rounded border border-indigo-600/30">APIs GraphQL</span>
+              <span class="px-2 py-1 text-xs bg-gradient-to-r from-indigo-600/20 to-purple-600/20 text-purple-300 rounded border border-purple-600/30">Microservicios</span>
+              <span class="px-2 py-1 text-xs bg-gradient-to-r from-indigo-600/20 to-purple-600/20 text-indigo-300 rounded border border-indigo-600/30">Performance</span>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Servicios -->
+  <Section title="Cómo Te Puedo Ayudar" subtitle="Servicios" spacing="xl">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="fade-in-up">
+        <Card variant="default" padding="lg">
+          <h3 class="text-xl font-bold text-white mb-4">Desarrollo Web Completo</h3>
+          <p class="text-gray-400 mb-6">
+            Desde la idea hasta el lanzamiento. Aplicaciones web modernas que convierten visitantes en clientes.
+          </p>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+              Frontend responsive
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+              Backend escalable
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+              Integración de APIs
+            </li>
+          </ul>
+        </Card>
+      </div>
+
+      <div class="fade-in-up animate-delay-200">
+        <Card variant="default" padding="lg">
+          <h3 class="text-xl font-bold text-white mb-4">APIs y Microservicios</h3>
+          <p class="text-gray-400 mb-6">
+            Arquitecturas robustas que crecen contigo. Sistemas distribuidos para empresas en expansión.
+          </p>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
+              REST & GraphQL
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
+              Documentación completa
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
+              Testing automatizado
+            </li>
+          </ul>
+        </Card>
+      </div>
+
+      <div class="fade-in-up animate-delay-400">
+        <Card variant="featured" padding="lg">
+          <h3 class="text-xl font-bold gradientStart mb-4">Consultoría Técnica</h3>
+          <p class="text-gray-400 mb-6">
+            Auditorías de código, optimización de performance y arquitectura de soluciones empresariales.
+          </p>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
+              Revisión de código
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
+              Optimización
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
+              Escalabilidad
+            </li>
+          </ul>
+        </Card>
+      </div>
+    </div>
+  </Section>
+
+  <!-- CTA Final -->
+  <Section spacing="xl" id="contacto">
+    <div class="text-center max-w-5xl mx-auto">
+      <div class="fade-in-up">
+        <h2 class="text-4xl md:text-6xl font-bold gradientStart mb-8">
+          ¿Listo para transformar tu idea en realidad?
+        </h2>
+        <p class="text-xl md:text-2xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto">
+          Conectemos y conversemos sobre cómo puedo ayudarte a construir la solución tecnológica 
+          que tu negocio necesita para <span class="gradientHighlight font-semibold">crecer y destacar</span> en el mercado.
+        </p>
+      </div>
+      
+      <!-- Métodos de Contacto Principales -->
+      <div class="fade-in-up animate-delay-200 grid md:grid-cols-2 gap-8 mb-16">
+        <!-- WhatsApp - Contacto Rápido -->
+        <Card variant="featured" padding="lg">
+          <div class="text-center group">
+            <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-green-500/30 transition-all duration-300">
+              <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Conversemos por WhatsApp</h3>
+            <p class="text-gray-400 mb-8 text-lg">Respuesta rápida y directa. Ideal para consultas urgentes y primeras conversaciones.</p>
+            <Button variant="primary" size="lg" href="https://wa.me/56972438969?text=Hola%20Maykol,%20me%20interesa%20conversar%20sobre%20un%20proyecto" class="w-full">
+              <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
+              </svg>
+              Enviar WhatsApp
+            </Button>
+            <p class="text-sm text-gray-500 mt-4">Disponible Lun-Vie 9:00-18:00 (UTC-3)</p>
+          </div>
+        </Card>
+
+        <!-- Email - Contacto Profesional -->
+        <Card variant="default" padding="lg">
+          <div class="text-center group">
+            <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-blue-500/30 transition-all duration-300">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Email Profesional</h3>
+            <p class="text-gray-400 mb-8 text-lg">Para propuestas detalladas, documentación técnica y comunicación formal.</p>
+            <Button variant="secondary" size="lg" href="mailto:maykol@maykolsalgado.me" class="w-full">
+              <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              Enviar Email
+            </Button>
+            <p class="text-sm text-gray-500 mt-4">Respuesta en 24-48 horas</p>
+          </div>
+        </Card>
+      </div>
+
+      <!-- Redes Sociales Destacadas -->
+      <div class="fade-in-up animate-delay-400">
+        <Card variant="featured" padding="lg" class="max-w-4xl mx-auto">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold gradientStart mb-4">Conectemos en Redes Sociales</h3>
+            <p class="text-gray-300 mb-8 text-lg">Sígueme para contenido técnico, actualizaciones de proyectos y networking profesional</p>
+            
+            <!-- Redes Sociales con Iconos Grandes -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <!-- GitHub -->
+              <a 
+                href="https://github.com/mayk0l/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="group flex flex-col items-center p-6 bg-black/40 rounded-2xl border border-slate-700 hover:border-slate-600 hover:bg-black/60 transition-all duration-300 hover:scale-105"
+              >
+                <div class="w-16 h-16 mb-4 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center group-hover:shadow-xl group-hover:shadow-gray-500/20 transition-all duration-300">
+                  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </div>
+                <h4 class="text-white font-semibold mb-1">GitHub</h4>
+                <p class="text-gray-400 text-sm text-center">Código abierto y proyectos</p>
+              </a>
+
+              <!-- LinkedIn -->
+              <a 
+                href="https://www.linkedin.com/in/maykol-nicolas-salgado-ramos-788366371/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="group flex flex-col items-center p-6 bg-black/40 rounded-2xl border border-slate-700 hover:border-blue-600 hover:bg-black/60 transition-all duration-300 hover:scale-105"
+              >
+                <div class="w-16 h-16 mb-4 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center group-hover:shadow-xl group-hover:shadow-blue-500/20 transition-all duration-300">
+                  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </div>
+                <h4 class="text-white font-semibold mb-1">LinkedIn</h4>
+                <p class="text-gray-400 text-sm text-center">Networking profesional</p>
+              </a>
+
+              <!-- Twitter/X -->
+              <a 
+                href="https://x.com/mayk0ldev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="group flex flex-col items-center p-6 bg-black/40 rounded-2xl border border-slate-700 hover:border-blue-400 hover:bg-black/60 transition-all duration-300 hover:scale-105"
+              >
+                <div class="w-16 h-16 mb-4 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center group-hover:shadow-xl group-hover:shadow-blue-400/20 transition-all duration-300">
+                  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </div>
+                <h4 class="text-white font-semibold mb-1">Twitter/X</h4>
+                <p class="text-gray-400 text-sm text-center">Updates y tech tips</p>
+              </a>
+
+              <!-- Calendario -->
+              <a 
+                href="https://wa.me/56972438969?text=Hola%20Maykol,%20me%20gustaría%20agendar%20una%20reunión%20para%20conversar%20sobre%20un%20proyecto" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="group flex flex-col items-center p-6 bg-black/40 rounded-2xl border border-slate-700 hover:border-purple-600 hover:bg-black/60 transition-all duration-300 hover:scale-105"
+              >
+                <div class="w-16 h-16 mb-4 bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl flex items-center justify-center group-hover:shadow-xl group-hover:shadow-purple-500/20 transition-all duration-300">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <h4 class="text-white font-semibold mb-1">Agendar</h4>
+                <p class="text-gray-400 text-sm text-center">Reunión virtual</p>
+              </a>
+            </div>
+          </div>
+        </Card>
+        
+        <!-- Información de contacto adicional -->
+        <Card variant="minimal" padding="lg" class="mt-8">
+          <div class="grid md:grid-cols-3 gap-8 text-center">
+            <div class="group">
+              <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <h4 class="text-lg font-medium text-white mb-2">Ubicación</h4>
+              <p class="text-gray-400">Chile 🇨🇱 (UTC-3)</p>
+            </div>
+            <div class="group">
+              <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-green-600 to-emerald-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h4 class="text-lg font-medium text-white mb-2">Disponibilidad</h4>
+              <p class="text-gray-400">Abierto a nuevos proyectos</p>
+            </div>
+            <div class="group">
+              <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h4 class="text-lg font-medium text-white mb-2">Tiempo de Respuesta</h4>
+              <p class="text-gray-400">24-48 horas</p>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </Section>
+</MainLayout>
+
+<style>
+  /* Importar las animaciones del global.css */
+  @import '../styles/global.css';
+  
+  /* Animaciones adicionales específicas para la homepage */
+  .hero-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Efectos adicionales para mejorar la experiencia */
+  .fade-in-up,
+  .fade-in-left,
+  .fade-in-right,
+  .scale-in {
+    will-change: transform, opacity;
+  }
+  
+  /* Mejoras de performance */
+  .gradientStart,
+  .gradientAccent {
+    will-change: auto;
+  }
+  
+  /* Asegurar que las animaciones se vean bien en móviles */
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in-up,
+    .fade-in-left,
+    .fade-in-right,
+    .scale-in {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>

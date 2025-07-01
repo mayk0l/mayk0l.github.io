@@ -1,0 +1,203 @@
+---
+import '../styles/global.css';
+import SocialLinks from '../components/SocialLinks.astro';
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} - Maykol Salgado</title>
+
+</head>
+<body class="darkBg lightText">
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-black/85 border-b border-slate-800/60 shadow-lg shadow-black/20">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="text-xl font-bold gradientStart transition-all duration-300 hover:scale-105 hover:drop-shadow-lg">
+                        MaykolSalgado
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <div class="flex items-baseline space-x-6">
+                        <a href="/" class="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-slate-800/60 relative group">
+                            <svg class="w-4 h-4 mr-2 transition-all duration-300 group-hover:scale-110 group-hover:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                            </svg>
+                            Inicio
+                            <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-blue-600 transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="/projects" class="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-slate-800/60 relative group">
+                            <svg class="w-4 h-4 mr-2 transition-all duration-300 group-hover:scale-110 group-hover:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                            Proyectos
+                            <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-blue-600 transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="/blog" class="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-slate-800/60 relative group">
+                            <svg class="w-4 h-4 mr-2 transition-all duration-300 group-hover:scale-110 group-hover:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                            Blog
+                            <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-blue-600 transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                    </div>
+                    
+                    <!-- Separador sutil -->
+                    <div class="w-px h-6 bg-slate-700"></div>
+                    
+                    <!-- Redes Sociales -->
+                    <SocialLinks variant="header" size="sm" class="hidden lg:flex" />
+                    
+                    <!-- Botón de Contacto -->
+                    <a href="mailto:maykol@maykolsalgado.me" class="flex items-center bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 border border-cyan-500/20">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        Contacto
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-800/60 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 transition-all duration-200" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <!-- Menu icon -->
+                        <svg class="menu-icon block h-6 w-6 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Close icon -->
+                        <svg class="close-icon hidden h-6 w-6 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu hidden md:hidden">
+                <div class="px-3 pt-3 pb-4 space-y-2 bg-slate-900/97 backdrop-blur-xl rounded-lg mt-3 border border-slate-700/60 shadow-2xl shadow-black/50 mx-2 sm:mx-0">
+                    <a href="/" class="flex items-center text-gray-300 hover:text-white px-3 py-3 rounded-md text-base font-medium transition-all duration-200 hover:bg-slate-800/60 hover:translate-x-1 group">
+                        <svg class="w-4 h-4 mr-3 transition-all duration-300 group-hover:scale-110 group-hover:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                        Inicio
+                    </a>
+                    <a href="/projects" class="flex items-center text-gray-300 hover:text-white px-3 py-3 rounded-md text-base font-medium transition-all duration-200 hover:bg-slate-800/60 hover:translate-x-1 group">
+                        <svg class="w-4 h-4 mr-3 transition-all duration-300 group-hover:scale-110 group-hover:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                        Proyectos
+                    </a>
+                    <a href="/blog" class="flex items-center text-gray-300 hover:text-white px-3 py-3 rounded-md text-base font-medium transition-all duration-200 hover:bg-slate-800/60 hover:translate-x-1 group">
+                        <svg class="w-4 h-4 mr-3 transition-all duration-300 group-hover:scale-110 group-hover:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                        Blog
+                    </a>
+                    <div class="pt-2 border-t border-slate-700/50">
+                        <a href="mailto:maykol@maykolsalgado.me" class="flex items-center bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 mt-2 hover:shadow-lg hover:shadow-cyan-500/25">
+                            <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            Contacto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <slot />
+    </main>
+    <footer class="py-12 text-center border-t border-slate-800 mt-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Redes Sociales -->
+            <div class="mb-6">
+                <p class="text-gray-400 mb-4 text-sm">Conectemos</p>
+                <SocialLinks variant="footer" size="md" class="justify-center" />
+            </div>
+            
+            <!-- Copyright -->
+            <p class="text-gray-500 text-sm">
+                © 2025 Maykol Salgado. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Funcionalidad del menú móvil y mejoras del navbar
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const menuIcon = document.querySelector('.menu-icon');
+            const closeIcon = document.querySelector('.close-icon');
+            const navbar = document.querySelector('header');
+            
+            // Funcionalidad del menú móvil
+            if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                    
+                    // Toggle menu visibility
+                    mobileMenu.classList.toggle('hidden');
+                    
+                    // Toggle icons with rotation
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                    
+                    // Update aria-expanded
+                    mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
+                });
+                
+                // Close menu when clicking on a link
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    const target = event.target;
+                    if (target && target instanceof Node && 
+                        !mobileMenuButton.contains(target) && !mobileMenu.contains(target)) {
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            menuIcon.classList.remove('hidden');
+                            closeIcon.classList.add('hidden');
+                            mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            }
+            
+            // Highlight active page
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('a[href="/"], a[href="/projects"], a[href="/blog"]');
+            
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPath || (currentPath === '/' && href === '/')) {
+                    link.classList.add('text-cyan-400');
+                    // Add active underline for desktop nav
+                    const underline = link.querySelector('span');
+                    if (underline) {
+                        underline.classList.add('w-full');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

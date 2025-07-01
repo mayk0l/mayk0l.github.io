@@ -1,0 +1,50 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  class?: string;
+  spacing?: 'sm' | 'md' | 'lg' | 'xl';
+  centered?: boolean;
+  id?: string;
+}
+
+const { 
+  title, 
+  subtitle, 
+  class: className = '',
+  spacing = 'lg',
+  centered = false,
+  id
+} = Astro.props;
+
+const spacings = {
+  sm: 'py-8',
+  md: 'py-12',
+  lg: 'py-16',
+  xl: 'py-24'
+};
+
+const containerClasses = `${spacings[spacing]} ${className}`;
+const textAlignment = centered ? 'text-center' : '';
+---
+
+<section class={containerClasses} id={id}>
+  {(title || subtitle) && (
+    <header class={`mb-12 ${textAlignment}`}>
+      {subtitle && (
+        <p class="text-purple-400 font-medium text-sm uppercase tracking-wider mb-2">
+          {subtitle}
+        </p>
+      )}
+      {title && (
+        <h2 class="text-3xl md:text-4xl font-bold gradientStart mb-4">
+          {title}
+        </h2>
+      )}
+    </header>
+  )}
+  
+  <div class="space-y-8">
+    <slot />
+  </div>
+</section>
