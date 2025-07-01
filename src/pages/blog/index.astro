@@ -8,8 +8,13 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
 
-// Filtrar solo posts publicados (no drafts)
-const posts = allPosts.filter(post => !post.data.draft);
+// Filtrar solo posts publicados (no drafts) y ordenar por fecha
+const posts = allPosts
+  .filter(post => {
+    // Verificación segura del campo draft
+    return post.data.draft !== true;
+  })
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()); // Más recientes primero
 
 // SEO para la página del blog
 const seoData = {

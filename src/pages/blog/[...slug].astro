@@ -10,7 +10,11 @@ import { generateStructuredData } from '../../utils/seo';
 // Función para generar rutas estáticas
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
-  return blogEntries.map(entry => ({
+  // Solo generar rutas para posts que NO son drafts
+  const publishedEntries = blogEntries.filter(entry => {
+    return entry.data.draft !== true;
+  });
+  return publishedEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
@@ -122,7 +126,7 @@ const getReadingTime = (content: string) => {
             
             <!-- Tags -->
             <div class="flex flex-wrap gap-2">
-              {entry.data.tags.map((tag) => (
+              {entry.data.tags && entry.data.tags.map((tag) => (
                 <span class="px-2 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-full border border-slate-700 hover:border-purple-500 transition-colors">
                   #{tag}
                 </span>
