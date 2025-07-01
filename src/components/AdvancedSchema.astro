@@ -82,33 +82,82 @@ const generateSchema = (type: string, data: any) => {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Maykol Salgado - Desarrollo Full Stack",
+        "alternateName": ["Maykol Salgado", "maykolsalgado"],
         "url": baseUrl,
-        "logo": `${baseUrl}/logo.svg`,
-        "image": `${baseUrl}/images/og-maykol-salgado.svg`,
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${baseUrl}/logo.svg`,
+          "width": 120,
+          "height": 40,
+          "contentUrl": `${baseUrl}/logo.svg`,
+          "caption": "Maykol Salgado Logo"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": `${baseUrl}/images/og-maykol-salgado.svg`,
+          "width": 1200,
+          "height": 630,
+          "contentUrl": `${baseUrl}/images/og-maykol-salgado.svg`,
+          "caption": "Maykol Salgado - Desarrollador Full Stack"
+        },
         "description": "Desarrollo de sistemas empresariales y soluciones tecnológicas para PYMEs en Chile y LATAM",
         "address": {
           "@type": "PostalAddress",
           "addressCountry": "CL",
-          "addressRegion": "Región Metropolitana"
+          "addressRegion": "Región Metropolitana",
+          "addressLocality": "Chile"
         },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+56972438969",
-          "contactType": "customer service",
-          "availableLanguage": ["Spanish"]
-        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+56972438969",
+            "contactType": "customer service",
+            "availableLanguage": ["Spanish", "English"],
+            "areaServed": ["CL", "LATAM"]
+          },
+          {
+            "@type": "ContactPoint",
+            "email": "maykol@maykolsalgado.me",
+            "contactType": "customer service",
+            "availableLanguage": ["Spanish", "English"],
+            "areaServed": ["CL", "LATAM"]
+          }
+        ],
         "founder": {
           "@type": "Person",
-          "name": "Maykol Salgado"
+          "name": "Maykol Salgado",
+          "url": baseUrl
         },
         "foundingDate": "2024",
-        "areaServed": ["Chile", "Latin America"],
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "Chile"
+          },
+          {
+            "@type": "Place",
+            "name": "Latin America"
+          }
+        ],
         "serviceType": [
           "Desarrollo Web",
           "Sistemas Empresariales", 
           "CMS Personalizado",
           "Consultoría Técnica",
-          "APIs RESTful"
+          "APIs RESTful",
+          "React Development",
+          "TypeScript Development",
+          "Node.js Development"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/maykol-nicolas-salgado-ramos-788366371/",
+          "https://x.com/mayk0ldev",
+          "https://github.com/mayk0l"
+        ],
+        "knowsAbout": [
+          "React", "TypeScript", "Node.js", "PostgreSQL", "JavaScript",
+          "Web Development", "Fullstack Development", "Software Engineering",
+          "Enterprise Systems", "CMS Development", "API Development"
         ]
       };
 

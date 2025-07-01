@@ -64,7 +64,7 @@ export function generateSEOTags(props: SEOProps = {}) {
   };
 }
 
-export function generateStructuredData(type: 'Person' | 'WebPage' | 'Article' | 'BreadcrumbList', data: any) {
+export function generateStructuredData(type: 'Person' | 'WebPage' | 'Article' | 'BreadcrumbList' | 'Organization', data: any) {
   const baseStructuredData = {
     '@context': 'https://schema.org'
   };
@@ -157,6 +157,57 @@ export function generateStructuredData(type: 'Person' | 'WebPage' | 'Article' | 
           name: item.name,
           item: item.url
         }))
+      };
+
+    case 'Organization':
+      return {
+        ...baseStructuredData,
+        '@type': 'Organization',
+        name: 'Maykol Salgado - Desarrollador Full Stack',
+        alternateName: ['Maykol Salgado', 'maykolsalgado', 'Maykol Nicolás Salgado'],
+        description: 'Desarrollador full stack especializado en sistemas empresariales para PYMEs Chile',
+        url: 'https://maykolsalgado.me',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://maykolsalgado.me/logo.svg',
+          width: 512,
+          height: 512,
+          caption: 'Maykol Salgado Logo'
+        },
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://maykolsalgado.me/images/og-maykol-salgado.svg',
+          width: 1200,
+          height: 630,
+          caption: 'Maykol Salgado - Desarrollador Full Stack'
+        },
+        founder: {
+          '@type': 'Person',
+          name: 'Maykol Salgado'
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          email: 'maykol@maykolsalgado.me',
+          contactType: 'customer service',
+          areaServed: ['CL', 'LATAM'],
+          availableLanguage: ['Spanish', 'English']
+        },
+        address: {
+          '@type': 'PostalAddress',
+          addressCountry: 'CL',
+          addressRegion: 'Chile'
+        },
+        sameAs: [
+          'https://github.com/mayk0l',
+          'https://linkedin.com/in/maykol-nicolas-salgado-ramos-788366371',
+          'https://twitter.com/mayk0ldev'
+        ],
+        knowsAbout: [
+          'React', 'TypeScript', 'Node.js', 'PostgreSQL', 'JavaScript', 
+          'Web Development', 'Fullstack Development', 'Software Engineering',
+          'Enterprise Systems', 'CMS Development', 'API Development'
+        ],
+        ...data
       };
 
     default:
