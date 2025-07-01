@@ -5,6 +5,7 @@ import SEOHead from '../components/SEOHead.astro';
 import Analytics from '../components/Analytics.astro';
 import ServiceWorker from '../components/ServiceWorker.astro';
 import SearchEngineVerification from '../components/SearchEngineVerification.astro';
+import { getAnalyticsConfig } from '../config/analytics';
 import type { SEOProps } from '../utils/seo';
 
 export interface Props extends SEOProps {
@@ -35,6 +36,9 @@ const {
   breadcrumbs,
   analytics
 } = Astro.props;
+
+// Get analytics configuration, use passed analytics or default configuration
+const analyticsConfig = analytics || getAnalyticsConfig(import.meta.env.DEV);
 ---
 
 <!DOCTYPE html>
@@ -77,11 +81,13 @@ const {
     <!-- Debug script para móviles (solo en desarrollo) -->
     {import.meta.env.DEV && <script is:inline src="/debug-mobile.js"></script>}
     
-    <!-- Analytics -->
-    <Analytics {...analytics} />
+    <!-- Analytics (includes Google Search Console verification) -->
+    <Analytics {...analyticsConfig} />
     
-    <!-- Search Engine Verification -->
-    <SearchEngineVerification />
+    <!-- Additional Search Engine Verification -->
+    <SearchEngineVerification 
+      bingSiteAuth={analyticsConfig.bingWebmasterCode}
+    />
     
     <!-- Service Worker -->
     <ServiceWorker enabled={!import.meta.env.DEV} />

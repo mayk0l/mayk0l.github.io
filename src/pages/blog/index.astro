@@ -5,6 +5,10 @@ import Section from '../../components/Section.astro';
 import Button from '../../components/Button.astro';
 import SocialLinks from '../../components/SocialLinks.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { getAnalyticsConfig } from '../../config/analytics';
+
+// Configuración de analytics
+const analytics = getAnalyticsConfig(import.meta.env.DEV);
 
 const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
 
@@ -23,7 +27,8 @@ const seoData = {
   keywords: "blog desarrollo, tutoriales react, typescript tips, nodejs blog, postgresql, desarrollo fullstack, blog técnico chile, maykol salgado blog",
   url: "https://maykolsalgado.me/blog",
   image: "https://maykolsalgado.me/images/primer-post-800x600.webp",
-  type: "website"
+  type: "website",
+  analytics
 };
 
 const breadcrumbs = [
