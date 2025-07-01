@@ -1,11 +1,10 @@
 ---
 title: "Cómo construí CajaPyme: de una idea simple a una solución real para microempresas"
 description: "La historia detrás del desarrollo de CajaPyme, un sistema de control de ingresos y gastos diseñado específicamente para microempresas chilenas."
-pubDate: 2025-07-01T11:41:21.338Z
-updatedDate: 2025-07-01T11:41:21.338Z
-heroImage: ""
-tags: ["react", "typescript", "postgresql", "pyme", "fintech"]
+date: 2025-07-01T11:41:21.338Z
 author: "Maykol Salgado"
+tags: ["react", "typescript", "postgresql", "pyme", "fintech"]
+coverImage: ""
 ---
 
 # Cómo construí CajaPyme: de una idea simple a una solución real para microempresas
