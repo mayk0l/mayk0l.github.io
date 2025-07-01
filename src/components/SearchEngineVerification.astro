@@ -1,0 +1,66 @@
+---
+export interface Props {
+  googleSiteVerification?: string;
+  bingSiteAuth?: string;
+  yandexVerification?: string;
+  pinterestSiteVerification?: string;
+}
+
+const { 
+  googleSiteVerification = 'ztdU9J4T8QvuvURI-7jqUtZPacWSXTV5w4Qn9v-NmmQ',
+  bingSiteAuth,
+  yandexVerification,
+  pinterestSiteVerification
+} = Astro.props;
+---
+
+{/* Google Search Console Verification */}
+{googleSiteVerification && (
+  <meta name="google-site-verification" content={googleSiteVerification} />
+)}
+
+{/* Bing Webmaster Tools Verification */}
+{bingSiteAuth && (
+  <meta name="msvalidate.01" content={bingSiteAuth} />
+)}
+
+{/* Yandex Webmaster Verification */}
+{yandexVerification && (
+  <meta name="yandex-verification" content={yandexVerification} />
+)}
+
+{/* Pinterest Site Verification */}
+{pinterestSiteVerification && (
+  <meta name="p:domain_verify" content={pinterestSiteVerification} />
+)}
+
+{/* Additional SEO Meta Tags for Business */}
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Maykol Salgado" />
+<meta name="reply-to" content="maykol.salgado.dev@gmail.com" />
+<meta name="owner" content="Maykol Salgado" />
+<meta name="url" content="https://maykolsalgado.me" />
+<meta name="identifier-URL" content="https://maykolsalgado.me" />
+<meta name="directory" content="submission" />
+<meta name="category" content="Technology, Web Development, Software Development" />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="rating" content="General" />
+<meta name="revisit-after" content="7 days" />
+<meta name="target" content="all" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+{/* Business-specific meta tags */}
+<meta name="geo.region" content="CL" />
+<meta name="geo.country" content="Chile" />
+<meta name="geo.placename" content="Santiago, Chile" />
+<meta name="ICBM" content="-33.4489, -70.6693" />
+
+{/* Professional verification meta tags */}
+<meta name="expertise" content="Full Stack Development, React, TypeScript, Node.js, PostgreSQL" />
+<meta name="specialization" content="Enterprise Systems, CMS Development, API Development" />
+<meta name="target-audience" content="SMEs, Enterprises, Business Owners, Startups" />
+<meta name="service-area" content="Chile, Latin America, Remote Work" />

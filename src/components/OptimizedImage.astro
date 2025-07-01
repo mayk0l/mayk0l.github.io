@@ -50,30 +50,151 @@ const { webpSrcSet, fallbackSrcSet } = generateSrcSet(src);
 const defaultSizes = sizes || '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
 ---
 
-<picture>
-  <!-- WebP format for modern browsers -->
-  <source 
-    srcset={webpSrcSet}
-    sizes={defaultSizes}
-    type="image/webp"
-  />
+<div class="optimized-image-container">
+  <picture>
+    <!-- WebP format for modern browsers -->
+    <source 
+      srcset={webpSrcSet}
+      sizes={defaultSizes}
+      type="image/webp"
+    />
+    
+    <!-- Fallback format -->
+    <source 
+      srcset={fallbackSrcSet}
+      sizes={defaultSizes}
+      type={`image/${src.split('.').pop()}`}
+    />
+    
+    <!-- Fallback img element -->
+    <img 
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      class={`optimized-image ${className || ''} ${priority ? 'priority-image' : 'lazy-image'}`}
+      loading={priority ? 'eager' : loading}
+      decoding={decoding}
+      style={priority ? 'content-visibility: auto; contain-intrinsic-size: auto;' : undefined}
+      data-priority={priority}
+    />
+  </picture>
   
-  <!-- Fallback format -->
-  <source 
-    srcset={fallbackSrcSet}
-    sizes={defaultSizes}
-    type={`image/${src.split('.').pop()}`}
-  />
-  
-  <!-- Fallback img element -->
-  <img 
-    src={src}
-    alt={alt}
-    width={width}
-    height={height}
-    class={className}
-    loading={priority ? 'eager' : loading}
-    decoding={decoding}
-    style={priority ? 'content-visibility: auto; contain-intrinsic-size: auto;' : undefined}
-  />
-</picture>
+  <!-- Low quality placeholder for better perceived performance -->
+  {!priority && (
+    <div 
+      class="image-placeholder"
+      style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(51, 65, 85, 0.6)); z-index: -1; border-radius: inherit;"
+    ></div>
+  )}
+</div>
+
+<style>
+.optimized-image-container {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.optimized-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.lazy-image {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+.priority-image {
+  opacity: 1;
+}
+
+.image-placeholder {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Performance optimizations */
+.optimized-image-container {
+  contain: layout style paint;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 200px;
+}
+</style>
+
+<script>
+// Enhanced lazy loading with Intersection Observer
+if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        
+        // Check if image is already loaded
+        if (img.complete && img.naturalHeight !== 0) {
+          img.classList.add('loaded');
+        } else {
+          img.addEventListener('load', () => {
+            img.classList.add('loaded');
+          }, { once: true });
+        }
+        
+        observer.unobserve(img);
+      }
+    });
+  }, {
+    rootMargin: '50px 0px',
+    threshold: 0.1
+  });
+
+  // Observe all lazy images when DOM is ready
+  const observeImages = () => {
+    document.querySelectorAll('.lazy-image:not(.loaded)').forEach(img => {
+      imageObserver.observe(img);
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observeImages);
+  } else {
+    observeImages();
+  }
+}
+
+// Performance monitoring for Core Web Vitals
+if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+  try {
+    // Monitor Largest Contentful Paint (LCP)
+    const lcpObserver = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        console.log('LCP:', entry.startTime);
+      });
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // Monitor Cumulative Layout Shift (CLS)
+    const clsObserver = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        console.log('CLS:', (entry as any).value);
+      });
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+  } catch (e) {
+    // Silently fail if not supported
+  }
+}
+</script>

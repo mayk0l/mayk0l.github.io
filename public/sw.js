@@ -1,32 +1,50 @@
-// Service Worker para cache y performance - Mejorado para móviles
-const CACHE_NAME = 'maykolsalgado-v3';
+// Service Worker para cache y performance - Optimizado para empresas
+const CACHE_NAME = 'maykolsalgado-v4';
+const STATIC_CACHE = 'static-v4';
+const DYNAMIC_CACHE = 'dynamic-v4';
+const IMAGE_CACHE = 'images-v4';
+
 const STATIC_ASSETS = [
   '/',
   '/projects',
   '/blog',
+  '/contact',
   '/404.html',
   '/logo.svg',
   '/favicon.svg',
   '/favicon.ico',
-  '/images/og-maykol-salgado.svg'
+  '/images/og-maykol-salgado.svg',
+  '/performance-optimizer.js'
 ];
+
+const CACHE_STRATEGIES = {
+  // Cache first for static assets
+  CACHE_FIRST: 'cache-first',
+  // Network first for dynamic content
+  NETWORK_FIRST: 'network-first',
+  // Stale while revalidate for images
+  STALE_WHILE_REVALIDATE: 'stale-while-revalidate'
+};
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
+    Promise.all([
+      caches.open(STATIC_CACHE).then((cache) => {
         console.log('Caching static assets...');
         return cache.addAll(STATIC_ASSETS);
-      })
-      .then(() => {
-        console.log('Service Worker installed successfully');
-        return self.skipWaiting();
-      })
-      .catch((error) => {
-        console.error('Service Worker install failed:', error);
-      })
+      }),
+      caches.open(DYNAMIC_CACHE),
+      caches.open(IMAGE_CACHE)
+    ])
+    .then(() => {
+      console.log('Service Worker installed successfully');
+      return self.skipWaiting();
+    })
+    .catch((error) => {
+      console.error('Service Worker install failed:', error);
+    })
   );
 });
 

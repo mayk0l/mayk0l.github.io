@@ -1,12 +1,12 @@
 const seoData = {
-  title: 'Maykol Salgado - Desarrollador Fullstack | React, TypeScript, Node.js',
-  description: 'Maykol Salgado, desarrollador de software fullstack especializado en React, TypeScript, Node.js y PostgreSQL. Creo soluciones modernas y eficientes para pymes y startups en Chile y LATAM.',
-  keywords: 'Maykol Salgado, maykol salgado, maykolsalgado, desarrollador fullstack, react, typescript, nodejs, postgresql, chile, software para pymes, desarrollador chile, programador fullstack, astro, tailwindcss, maykol nicolás salgado, maykol nicolas salgado',
+  title: 'Maykol Salgado - Desarrollador Full Stack Chile | Sistemas Empresariales React Node.js TypeScript',
+  description: 'Maykol Salgado, desarrollador full stack especializado en sistemas empresariales para PYMEs Chile. Desarrollo aplicaciones React, TypeScript, Node.js, PostgreSQL. Soluciones CMS personalizados, APIs escalables y consultoría técnica para empresas LATAM.',
+  keywords: 'Maykol Salgado, desarrollador full stack chile, sistemas empresariales, aplicaciones react typescript, node.js postgresql, CMS personalizado, APIs escalables, consultoría técnica, desarrollo pymes chile, soluciones empresariales latam, arquitecto software, programador fullstack',
   author: 'Maykol Salgado',
   url: 'https://maykolsalgado.me',
   image: 'https://maykolsalgado.me/images/og-maykol-salgado.svg',
   type: 'website',
-  siteName: 'Maykol Salgado - Desarrollador Fullstack',
+  siteName: 'Maykol Salgado - Desarrollador Full Stack Empresarial',
   locale: 'es_CL',
   twitterHandle: '@mayk0ldev'
 };
