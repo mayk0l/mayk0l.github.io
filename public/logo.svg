@@ -1,0 +1,42 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Ícono de código -->
+  <g transform="translate(8, 8)">
+    <!-- Fondo del ícono -->
+    <rect width="24" height="24" rx="4" fill="url(#logoGradient)" />
+    
+    <!-- Ventana del navegador -->
+    <rect x="2" y="4" width="20" height="16" rx="1.5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="0.4"/>
+    
+    <!-- Barra superior del navegador -->
+    <rect x="2" y="4" width="20" height="3" rx="1.5" fill="rgba(255,255,255,0.15)"/>
+    
+    <!-- Botones de ventana -->
+    <circle cx="4.5" cy="5.5" r="0.6" fill="rgba(255,255,255,0.4)"/>
+    <circle cx="6.5" cy="5.5" r="0.6" fill="rgba(255,255,255,0.4)"/>
+    <circle cx="8.5" cy="5.5" r="0.6" fill="rgba(255,255,255,0.4)"/>
+    
+    <!-- Código: etiqueta de apertura -->
+    <path d="M8 11 L6 13 L8 15" stroke="rgba(255,255,255,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <!-- Código: etiqueta de cierre -->
+    <path d="M16 11 L18 13 L16 15" stroke="rgba(255,255,255,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <!-- Código: slash -->
+    <path d="M13 10 L11 16" stroke="rgba(255,255,255,0.7)" stroke-width="1" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <!-- Texto "MS" o nombre -->
+  <text x="44" y="26" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="white">
+    MS
+  </text>
+  
+  <!-- Punto decorativo -->
+  <circle cx="74" cy="21" r="2" fill="url(#logoGradient)"/>
+</svg>
