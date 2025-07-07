@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://maykolsalgado.me/sitemap.xml
+Sitemap: https://maykolsalgado.me/sitemap-index.xml
 
 # Specific rules for search engines
 User-agent: Googlebot
