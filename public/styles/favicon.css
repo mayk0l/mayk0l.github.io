@@ -1,0 +1,40 @@
+/* Estilos para hacer el favicon circular */
+link[rel="icon"] {
+    border-radius: 50%;
+    clip-path: circle(50%);
+}
+
+/* Favicon circular para diferentes tamaños */
+link[rel="icon"][sizes="16x16"],
+link[rel="icon"][sizes="32x32"] {
+    border-radius: 50%;
+    clip-path: circle(50%);
+}
+
+/* Apple touch icon circular */
+link[rel="apple-touch-icon"] {
+    border-radius: 50%;
+}
+
+/* Mask icon circular */
+link[rel="mask-icon"] {
+    clip-path: circle(50%);
+}
+
+/* Estilos adicionales para diferentes navegadores */
+@supports (clip-path: circle()) {
+    link[rel="icon"], 
+    link[rel="shortcut icon"], 
+    link[rel="apple-touch-icon"] {
+        clip-path: circle(50%);
+    }
+}
+
+/* Alternativa usando border-radius para navegadores que no soportan clip-path */
+@supports not (clip-path: circle()) {
+    link[rel="icon"], 
+    link[rel="shortcut icon"], 
+    link[rel="apple-touch-icon"] {
+        border-radius: 50%;
+    }
+}

@@ -74,7 +74,7 @@ const getReadingTime = (content: string) => {
 
 <MainLayout {...seoData} breadcrumbs={breadcrumbs} structuredData={articleStructuredData}>
   <!-- Hero del Artículo -->
-  <section class="py-16 px-4">
+  <section class="py-2 px-4">
     <div class="max-w-4xl mx-auto">
       <div class="fade-in-up">
         <!-- Breadcrumb -->
@@ -145,7 +145,7 @@ const getReadingTime = (content: string) => {
 
   <!-- Imagen de Portada -->
   {entry.data.coverImage && (
-    <section class="px-4 mb-12">
+    <section class="px-4 mb-4">
       <div class="max-w-4xl mx-auto">
         <div class="fade-in-up animate-delay-200">
           <Card variant="minimal" padding="sm">
@@ -161,7 +161,7 @@ const getReadingTime = (content: string) => {
   )}
 
   <!-- Contenido del Artículo -->
-  <Section spacing="xl">
+  <Section spacing="sm">
     <div class="max-w-4xl mx-auto">
       <div class="fade-in-up animate-delay-400">
         <Card variant="default" padding="lg">
