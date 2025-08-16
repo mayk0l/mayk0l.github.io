@@ -282,8 +282,8 @@ const analyticsConfig = analytics || getAnalyticsConfig(import.meta.env.DEV);
         });
     </script>
 
-    <!-- Performance Optimizer -->
-    <script is:inline src="/performance-optimizer.js"></script>
+    <!-- Performance Optimizer (only in production) -->
+    { !import.meta.env.DEV && <script is:inline src="/performance-optimizer.js"></script> }
 </body>
 </html>
 

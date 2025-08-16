@@ -1,0 +1,24 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+
+const seoData = {
+  title: 'Gracias - Mensaje recibido | Maykol Salgado',
+  description: 'Gracias por tu mensaje. Te responderé en 24-48 horas. Puedes agendar una llamada si necesitas respuesta urgente.',
+  url: 'https://maykolsalgado.me/gracias',
+};
+---
+
+<MainLayout {...seoData}>
+  <Section title="Gracias" subtitle="Mensaje recibido" spacing="lg">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold gradientStart mb-4">¡Gracias! He recibido tu mensaje.</h2>
+      <p class="text-gray-300 mb-6">Revisaré tu consulta y responderé en 24-48 horas. Si tu caso es urgente, agenda una llamada o escríbeme por WhatsApp para priorizar tu solicitud.</p>
+      <div class="flex justify-center gap-4">
+        <Button variant="primary" href="https://wa.me/56972438969?text=Hola%20Maykol,%20necesito%20priorizar%20mi%20consulta">Agendar por WhatsApp</Button>
+        <Button variant="outline" href="/">Volver al inicio</Button>
+      </div>
+    </div>
+  </Section>
+</MainLayout>

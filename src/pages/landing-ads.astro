@@ -1,0 +1,69 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Button from '../components/Button.astro';
+
+const seoData = {
+  title: 'Soluciones digitales para PYMEs chilenas — Cotiza con Maykol',
+  description: 'Desarrollo web y software para PYMEs en Chile: mejora ventas, automatiza procesos y soporte local. Cotización gratuita.',
+  url: 'https://maykolsalgado.me/landing-ads',
+};
+---
+
+<MainLayout {...seoData}>
+  <section class="min-h-screen flex items-center bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+    <div class="container mx-auto px-6 lg:px-20 py-20">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">Software y sitios para PYMEs chilenas que quieren crecer</h1>
+        <p class="mt-4 text-lg text-slate-300">Proyectos prácticos y rápidos: mejora tus ventas online, automatiza tareas y reduce costos operativos. Cotización y consultoría inicial gratis.</p>
+
+        <div class="mt-8 flex flex-col items-center gap-3">
+          <Button variant="primary" href="/contacto" id="ads-cta">Solicita tu cotización gratuita</Button>
+          <p class="text-sm text-slate-300">Respuesta en 24-48 horas. También atiendo por WhatsApp si necesitas rapidez.</p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="bg-slate-900/30 p-4 rounded">
+            <h3 class="font-semibold">Rápido</h3>
+            <p class="text-sm text-slate-300 mt-1">Proyectos listos en semanas, no meses.</p>
+          </div>
+          <div class="bg-slate-900/30 p-4 rounded">
+            <h3 class="font-semibold">Práctico</h3>
+            <p class="text-sm text-slate-300 mt-1">Soluciones enfocadas en resultados medibles.</p>
+          </div>
+          <div class="bg-slate-900/30 p-4 rounded">
+            <h3 class="font-semibold">Soporte</h3>
+            <p class="text-sm text-slate-300 mt-1">Acompañamiento local y soporte post-lanzamiento.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    (function(){
+      try {
+        const cta = document.getElementById('ads-cta');
+        if (!cta) return;
+        // Preserve any UTM or query params from the ad click
+        const search = location.search || '';
+        const base = cta.getAttribute('href') || '/contacto';
+        cta.setAttribute('href', base + search);
+
+        // Optional: push tracking hooks for GTM/gtag when clicking CTA
+        cta.addEventListener('click', function(){
+          try {
+            if (window.gtag) {
+              window.gtag('event','conversion', { 'send_to': 'AW-CONVERSION_ID/label' });
+            }
+            if (window.dataLayer) {
+              window.dataLayer.push({ event: 'ads_cta_click' });
+            }
+          } catch (e) { /* ignore */ }
+        });
+      } catch (e) {
+        console.warn('landing-ads helper', e);
+      }
+    })();
+  </script>
+</MainLayout>

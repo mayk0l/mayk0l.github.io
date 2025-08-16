@@ -5,10 +5,12 @@ export interface ServiceWorkerProps {
   path?: string;
 }
 
+// Do not allow Service Worker registration in development by default
 const { enabled = true, path = '/sw.js' } = Astro.props;
+const shouldRegister = enabled && !import.meta.env.DEV;
 ---
 
-{enabled && (
+{shouldRegister && (
   <script define:vars={{ path }}>
     // Register Service Worker con mejor manejo de errores
     if ('serviceWorker' in navigator) {
@@ -36,7 +38,7 @@ const { enabled = true, path = '/sw.js' } = Astro.props;
           });
       });
 
-      // Manejar mensajes del Service Worker
+      // Manejar mensajes del Service Worker (solo en producción)
       navigator.serviceWorker.addEventListener('message', (event) => {
         console.log('Mensaje del SW:', event.data);
       });
@@ -44,7 +46,6 @@ const { enabled = true, path = '/sw.js' } = Astro.props;
       // Detectar cuando el SW está controlando la página
       navigator.serviceWorker.addEventListener('controllerchange', () => {
         console.log('SW controller changed');
-        // Opcionalmente recargar la página para usar la nueva versión
       });
     } else {
       console.warn('Service Workers no son soportados en este navegador');

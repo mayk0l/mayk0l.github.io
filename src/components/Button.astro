@@ -6,6 +6,8 @@ export interface Props {
   target?: string;
   rel?: string;
   class?: string;
+  id?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const { 
@@ -14,7 +16,9 @@ const {
   href, 
   target,
   rel,
-  class: className = '' 
+  class: className = '' ,
+  id = undefined,
+  type = 'button'
 } = Astro.props;
 
 const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-opacity-50';
@@ -35,11 +39,11 @@ const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}
 ---
 
 {href ? (
-  <a href={href} target={target} rel={rel} class={classes}>
+  <a id={id} href={href} target={target} rel={rel} class={classes}>
     <slot />
   </a>
 ) : (
-  <button class={classes}>
+  <button id={id} type={type} class={classes}>
     <slot />
   </button>
 )}

@@ -1,0 +1,150 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Button from '../components/Button.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+
+const seoData = {
+  title: 'Contacto - Solicita una cotización | Maykol Salgado',
+  description: 'Envía tu consulta o solicita una cotización. Respuesta en 24-48 horas. Consulta técnica gratuita de 30 minutos para proyectos empresariales.',
+  url: 'https://maykolsalgado.me/contacto',
+};
+---
+
+<MainLayout {...seoData}>
+  <Section title="Contacto" subtitle="Envíame los detalles de tu proyecto" spacing="xl">
+    <div class="max-w-2xl mx-auto">
+      <Card variant="featured" padding="lg">
+        <form action="https://formspree.io/f/mgvzqgyn" method="post" class="space-y-4" id="contact-form">
+          <!-- Formspree hidden fields -->
+          <input type="hidden" name="_next" id="_next_url" value="https://maykolsalgado.me/gracias" />
+          <input type="hidden" name="_subject" value="Nuevo lead desde sitio web - Contacto" />
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" />
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-200 mb-1">Nombre</label>
+            <input id="name" name="name" type="text" required class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-200 mb-1">Email</label>
+            <!-- Formspree uses _replyto to set reply-to address -->
+            <input id="email" name="_replyto" type="email" required class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+          </div>
+
+          <div>
+            <label for="company" class="block text-sm font-medium text-gray-200 mb-1">Empresa (opcional)</label>
+            <input id="company" name="company" type="text" class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-200 mb-1">Mensaje / Requerimiento</label>
+            <textarea id="message" name="message" rows="6" required class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+          </div>
+
+          <div class="flex justify-center">
+            <Button variant="primary" type="submit">Enviar consulta</Button>
+          </div>
+        </form>
+
+        <script is:inline>
+          (function(){
+            try {
+              const form = document.getElementById('contact-form');
+              if (!form) return;
+
+              // Ensure _next points to local origin when testing on localhost
+              const next = document.getElementById('_next_url');
+              if (next) {
+                const host = location.hostname;
+                if (host === 'localhost' || host === '127.0.0.1') {
+                  next.value = location.origin + '/gracias';
+                }
+              }
+
+              // Copy UTM params into hidden fields if present
+              const params = new URLSearchParams(location.search);
+              ['utm_source','utm_medium','utm_campaign','utm_term'].forEach(k => {
+                const v = params.get(k);
+                if (v) {
+                  const inp = document.createElement('input');
+                  inp.type = 'hidden';
+                  inp.name = k;
+                  inp.value = v;
+                  form.appendChild(inp);
+                }
+              });
+
+              // Create a status container for immediate feedback
+              let statusEl = document.getElementById('contact-status');
+              if (!statusEl) {
+                statusEl = document.createElement('div');
+                statusEl.id = 'contact-status';
+                statusEl.setAttribute('aria-live','polite');
+                statusEl.className = 'mt-4 text-sm';
+                form.parentNode.insertBefore(statusEl, form.nextSibling);
+              }
+
+              // Submit handler using fetch (shows response in-page)
+              form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                statusEl.innerHTML = '';
+
+                // disable submit button
+                const submitBtn = form.querySelector('button[type="submit"]');
+                if (submitBtn) {
+                  submitBtn.disabled = true;
+                  submitBtn.setAttribute('aria-busy','true');
+                }
+
+                // Respect honeypot: if filled, abort
+                const gotcha = form.querySelector('[name="_gotcha"]');
+                if (gotcha && gotcha.value) {
+                  statusEl.innerHTML = '<div class="text-red-400">Spam detected.</div>';
+                  if (submitBtn) { submitBtn.disabled = false; submitBtn.removeAttribute('aria-busy'); }
+                  return;
+                }
+
+                try {
+                  const formData = new FormData(form);
+                  const resp = await fetch(form.action, {
+                    method: form.method || 'POST',
+                    headers: {
+                      'Accept': 'application/json'
+                    },
+                    body: formData
+                  });
+
+                  let json = null;
+                  try { json = await resp.json(); } catch (_) { /* non-json response */ }
+
+                  if (resp.ok) {
+                    statusEl.innerHTML = '<div class="text-green-400">Gracias — envío recibido. Redirigiendo…</div>';
+                    // short delay so user sees message, then redirect to _next
+                    setTimeout(() => {
+                      const nextUrl = (document.getElementById('_next_url') || {}).value || '/gracias';
+                      window.location.href = nextUrl;
+                    }, 800);
+                  } else {
+                    const message = (json && (json.error || json.message)) || `Error ${resp.status}`;
+                    statusEl.innerHTML = `<div class="text-red-400">Ocurrió un error: ${message}</div>`;
+                  }
+                } catch (err) {
+                  console.error('Contact form submit error', err);
+                  statusEl.innerHTML = '<div class="text-red-400">Error de red. Intenta nuevamente.</div>';
+                } finally {
+                  if (submitBtn) { submitBtn.disabled = false; submitBtn.removeAttribute('aria-busy'); }
+                }
+              });
+
+            } catch (e) {
+              console.warn('Contact form helper error', e);
+            }
+          })();
+        </script>
+
+        <p class="text-xs text-gray-400 mt-4">Al enviar, recibirás una respuesta en 24-48 horas. Para respuestas más rápidas, usa WhatsApp.</p>
+      </Card>
+    </div>
+  </Section>
+</MainLayout>
