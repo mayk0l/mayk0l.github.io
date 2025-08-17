@@ -18,6 +18,9 @@ export const analyticsConfig = {
   
   // Microsoft Clarity (opcional) - Alternativa gratuita a Hotjar
   microsoftClarityId: '', // Reemplaza con tu ID de Clarity si lo usas
+  
+  // Meta / Facebook Pixel (opcional)
+  fbPixelId: '1348148767317273', // Reemplaza con tu Pixel ID si lo usas
 };
 
 // Configuración por ambiente
