@@ -101,9 +101,9 @@ const analyticsConfig = analytics || getAnalyticsConfig(import.meta.env.DEV);
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="/" class="flex items-center space-x-3 transition-all duration-300 hover:scale-105 hover:drop-shadow-lg">
-                        <img src="/favicon.svg" alt="Maykol Salgado" class="h-10 w-10 rounded-full border-2 border-slate-600/30" />
-                        <span class="text-xl font-bold text-white">Maykol Salgado</span>
+                    <a href="/" class="flex items-center space-x-2 sm:space-x-3 transition-all duration-300 hover:scale-105 hover:drop-shadow-lg">
+                        <img src="/favicon.svg" alt="Maykol Salgado" class="h-8 w-8 sm:h-10 sm:w-10 rounded-full border-2 border-slate-600/30" />
+                        <span class="text-lg sm:text-xl font-bold text-white">Maykol Salgado</span>
                     </a>
                 </div>
                 
@@ -168,6 +168,12 @@ const analyticsConfig = analytics || getAnalyticsConfig(import.meta.env.DEV);
             <!-- Mobile menu -->
             <div class="mobile-menu hidden md:hidden">
                 <div class="px-3 pt-3 pb-4 space-y-2 bg-slate-900/97 backdrop-blur-xl rounded-lg mt-3 border border-slate-700/60 shadow-2xl shadow-black/50 mx-2 sm:mx-0">
+                    <!-- Mobile menu header with logo -->
+                    <div class="flex items-center justify-center py-3 border-b border-slate-700/50 mb-3">
+                        <img src="/favicon.svg" alt="Maykol Salgado" class="h-8 w-8 rounded-full border-2 border-slate-600/30 mr-3" />
+                        <span class="text-lg font-bold text-white">Maykol Salgado</span>
+                    </div>
+                    
                     <a href="/" class="flex items-center text-gray-300 hover:text-white px-3 py-3 rounded-md text-base font-medium transition-all duration-200 hover:bg-slate-800/60 hover:translate-x-1 group">
                         <svg class="w-4 h-4 mr-3 transition-all duration-300 group-hover:scale-110 group-hover:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
@@ -196,19 +202,19 @@ const analyticsConfig = analytics || getAnalyticsConfig(import.meta.env.DEV);
             </div>
         </nav>
     </header>
-    <main class="max-w-6xl mx-auto px-4 py-0 sm:py-8">
+    <main class="max-w-6xl mx-auto px-3 sm:px-4 py-0 sm:py-8">
         <slot />
     </main>
-    <footer class="py-8 sm:py-12 text-center border-t border-slate-800 mt-8 sm:mt-12 md:mt-16">
-        <div class="max-w-6xl mx-auto px-4">
+    <footer class="py-6 sm:py-8 md:py-12 text-center border-t border-slate-800 mt-6 sm:mt-8 md:mt-16">
+        <div class="max-w-6xl mx-auto px-3 sm:px-4">
             <!-- Redes Sociales -->
-            <div class="mb-6">
-                <p class="text-gray-400 mb-4 text-sm">Conectemos</p>
+            <div class="mb-4 sm:mb-6">
+                <p class="text-gray-400 mb-3 sm:mb-4 text-sm">Conectemos</p>
                 <SocialLinks variant="footer" size="md" class="justify-center" />
             </div>
             
             <!-- Copyright -->
-            <p class="text-gray-500 text-sm">
+            <p class="text-gray-500 text-xs sm:text-sm">
                 © 2025 Maykol Salgado. Todos los derechos reservados.
             </p>
         </div>
