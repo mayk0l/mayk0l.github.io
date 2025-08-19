@@ -5,45 +5,179 @@ import Section from '../components/Section.astro';
 import Card from '../components/Card.astro';
 
 const seoData = {
-  title: 'Contacto - Solicita una cotización | Maykol Salgado',
-  description: 'Envía tu consulta o solicita una cotización. Respuesta en 24-48 horas. Consulta técnica gratuita de 30 minutos para proyectos empresariales.',
+  title: 'Agenda tu Consulta GRATUITA | Automatiza tu Empresa - Maykol Salgado',
+  description: 'Consulta técnica gratuita de 30 min para automatizar tu empresa. Analizo tus procesos y te propongo soluciones que ahorren tiempo y dinero. Respuesta en 24-48 horas.',
   url: 'https://maykolsalgado.me/contacto',
 };
 ---
 
 <MainLayout {...seoData}>
-  <Section title="Contacto" subtitle="Envíame los detalles de tu proyecto" spacing="xl">
-    <div class="max-w-2xl mx-auto">
+  <!-- Hero de Contacto Optimizado -->
+  <section class="py-12 text-center">
+    <div class="max-w-4xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-green-600/10 border border-green-600/20 rounded-full text-green-400 text-sm font-medium mb-6">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        🎁 Consulta gratuita valorada en $50.000
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <span class="gradientStart">¿Listo para</span><br>
+        <span class="gradientHighlight">automatizar tu empresa?</span>
+      </h1>
+      <p class="text-xl text-gray-300 mb-8">
+        En 30 minutos identificamos qué sistema necesitas, cuánto vas a ahorrar en tiempo y dinero, 
+        y te doy un plan de acción claro para <span class="text-white font-semibold">automatizar tu empresa este mismo mes</span>.
+      </p>
+    </div>
+  </section>
+
+  <Section title="2 Formas de Contactarme" subtitle="Elige la que más te convenga" spacing="lg">
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- WhatsApp - Opción Recomendada -->
       <Card variant="featured" padding="lg">
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
+            </svg>
+          </div>
+          <div class="mb-4">
+            <span class="inline-flex items-center gap-1 px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm font-medium border border-green-600/30">
+              ⚡ RECOMENDADO
+            </span>
+          </div>
+          <h3 class="text-2xl font-bold gradientStart mb-4">WhatsApp Directo</h3>
+          <p class="text-gray-300 mb-6">
+            Conversación inmediata, agenda tu consulta en 30 segundos. 
+            <span class="text-green-400 font-semibold">Respuesta en 2-4 horas</span>.
+          </p>
+          
+          <div class="space-y-3 text-left mb-6">
+            <div class="flex items-center gap-2">
+              <span class="text-green-400">✅</span>
+              <span class="text-gray-300 text-sm">Respuesta garantizada en 2-4 horas</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-green-400">✅</span>
+              <span class="text-gray-300 text-sm">Agenda tu consulta de inmediato</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-green-400">✅</span>
+              <span class="text-gray-300 text-sm">Comunicación directa y personal</span>
+            </div>
+          </div>
+
+          <Button variant="primary" size="lg" href="https://wa.me/56972438969?text=🎯%20Hola%20Maykol,%20quiero%20agendar%20mi%20consulta%20GRATUITA%20de%2030%20min.%0A%0A📋%20Mi%20empresa:%20________________%0A❗%20Mi%20mayor%20problema:%20________________%0A📞%20Mi%20teléfono:%20________________%0A%0A¡Gracias!" class="w-full mb-4">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
+            </svg>
+            Agendar Consulta GRATIS
+          </Button>
+          <p class="text-green-400 text-sm font-medium">+56 9 7243 8969</p>
+        </div>
+      </Card>
+
+      <!-- Formulario Email -->
+      <Card variant="default" padding="lg">
+        <div class="text-center mb-6">
+          <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Formulario Detallado</h3>
+          <p class="text-gray-300 mb-6">
+            Para propuestas formales y consultas detalladas. 
+            <span class="text-blue-400 font-semibold">Respuesta en 24-48 horas</span>.
+          </p>
+        </div>
+
         <form action="https://formspree.io/f/mgvzqgyn" method="post" class="space-y-4" id="contact-form">
           <!-- Formspree hidden fields -->
           <input type="hidden" name="_next" id="_next_url" value="https://maykolsalgado.me/gracias" />
-          <input type="hidden" name="_subject" value="Nuevo lead desde sitio web - Contacto" />
+          <input type="hidden" name="_subject" value="🚨 NUEVO LEAD B2B - Consulta desde formulario de contacto" />
           <!-- Honeypot anti-spam -->
           <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" />
+          
           <div>
-            <label for="name" class="block text-sm font-medium text-gray-200 mb-1">Nombre</label>
-            <input id="name" name="name" type="text" required class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+            <label for="name" class="block text-sm font-medium text-gray-200 mb-2">Nombre Completo *</label>
+            <input 
+              id="name" 
+              name="name" 
+              type="text" 
+              required 
+              placeholder="Ej: Juan Pérez"
+              class="w-full rounded-md border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+            />
           </div>
 
           <div>
-            <label for="email" class="block text-sm font-medium text-gray-200 mb-1">Email</label>
-            <!-- Formspree uses _replyto to set reply-to address -->
-            <input id="email" name="_replyto" type="email" required class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+            <label for="email" class="block text-sm font-medium text-gray-200 mb-2">Email Empresarial *</label>
+            <input 
+              id="email" 
+              name="_replyto" 
+              type="email" 
+              required 
+              placeholder="tu.email@empresa.com"
+              class="w-full rounded-md border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+            />
           </div>
 
           <div>
-            <label for="company" class="block text-sm font-medium text-gray-200 mb-1">Empresa (opcional)</label>
-            <input id="company" name="company" type="text" class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+            <label for="company" class="block text-sm font-medium text-gray-200 mb-2">Empresa</label>
+            <input 
+              id="company" 
+              name="company" 
+              type="text" 
+              placeholder="Nombre de tu empresa"
+              class="w-full rounded-md border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+            />
           </div>
 
           <div>
-            <label for="message" class="block text-sm font-medium text-gray-200 mb-1">Mensaje / Requerimiento</label>
-            <textarea id="message" name="message" rows="6" required class="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+            <label for="phone" class="block text-sm font-medium text-gray-200 mb-2">Teléfono WhatsApp</label>
+            <input 
+              id="phone" 
+              name="phone" 
+              type="tel" 
+              placeholder="+56 9 XXXX XXXX"
+              class="w-full rounded-md border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+            />
+          </div>
+
+          <div>
+            <label for="budget" class="block text-sm font-medium text-gray-200 mb-2">Presupuesto Aproximado</label>
+            <select 
+              id="budget" 
+              name="budget"
+              class="w-full rounded-md border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            >
+              <option value="">Selecciona un rango</option>
+              <option value="250-500k">$250.000 - $500.000 CLP</option>
+              <option value="500k-1M">$500.000 - $1.000.000 CLP</option>
+              <option value="1M-2M">$1.000.000 - $2.000.000 CLP</option>
+              <option value="2M+">Más de $2.000.000 CLP</option>
+              <option value="no-seguro">No estoy seguro</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-200 mb-2">Describe tu proyecto o problema *</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              required 
+              placeholder="Ej: Necesito automatizar el control de inventario de mi tienda. Actualmente uso Excel y pierdo mucho tiempo con errores de stock..."
+              class="w-full rounded-md border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            ></textarea>
           </div>
 
           <div class="flex justify-center">
-            <Button variant="primary" type="submit">Enviar consulta</Button>
+            <Button variant="primary" type="submit" size="lg" class="w-full">
+              Enviar Consulta Detallada
+            </Button>
           </div>
         </form>
 
@@ -95,13 +229,18 @@ const seoData = {
                 if (submitBtn) {
                   submitBtn.disabled = true;
                   submitBtn.setAttribute('aria-busy','true');
+                  submitBtn.innerHTML = 'Enviando...';
                 }
 
                 // Respect honeypot: if filled, abort
                 const gotcha = form.querySelector('[name="_gotcha"]');
                 if (gotcha && gotcha.value) {
                   statusEl.innerHTML = '<div class="text-red-400">Spam detected.</div>';
-                  if (submitBtn) { submitBtn.disabled = false; submitBtn.removeAttribute('aria-busy'); }
+                  if (submitBtn) { 
+                    submitBtn.disabled = false; 
+                    submitBtn.removeAttribute('aria-busy'); 
+                    submitBtn.innerHTML = 'Enviar Consulta Detallada';
+                  }
                   return;
                 }
 
@@ -119,21 +258,25 @@ const seoData = {
                   try { json = await resp.json(); } catch (_) { /* non-json response */ }
 
                   if (resp.ok) {
-                    statusEl.innerHTML = '<div class="text-green-400">Gracias — envío recibido. Redirigiendo…</div>';
+                    statusEl.innerHTML = '<div class="text-green-400 font-medium">✅ Consulta enviada correctamente. Te responderé en 24-48 horas.</div>';
                     // short delay so user sees message, then redirect to _next
                     setTimeout(() => {
                       const nextUrl = (document.getElementById('_next_url') || {}).value || '/gracias';
                       window.location.href = nextUrl;
-                    }, 800);
+                    }, 2000);
                   } else {
                     const message = (json && (json.error || json.message)) || `Error ${resp.status}`;
                     statusEl.innerHTML = `<div class="text-red-400">Ocurrió un error: ${message}</div>`;
                   }
                 } catch (err) {
                   console.error('Contact form submit error', err);
-                  statusEl.innerHTML = '<div class="text-red-400">Error de red. Intenta nuevamente.</div>';
+                  statusEl.innerHTML = '<div class="text-red-400">Error de conexión. Por favor, intenta por WhatsApp.</div>';
                 } finally {
-                  if (submitBtn) { submitBtn.disabled = false; submitBtn.removeAttribute('aria-busy'); }
+                  if (submitBtn) { 
+                    submitBtn.disabled = false; 
+                    submitBtn.removeAttribute('aria-busy'); 
+                    submitBtn.innerHTML = 'Enviar Consulta Detallada';
+                  }
                 }
               });
 
@@ -143,7 +286,51 @@ const seoData = {
           })();
         </script>
 
-        <p class="text-xs text-gray-400 mt-4">Al enviar, recibirás una respuesta en 24-48 horas. Para respuestas más rápidas, usa WhatsApp.</p>
+        <p class="text-xs text-gray-400 mt-4 text-center">
+          💡 <strong>Tip:</strong> Para respuestas más rápidas (2-4 horas), usa WhatsApp.
+        </p>
+      </Card>
+    </div>
+  </Section>
+
+  <!-- Garantías y información adicional -->
+  <Section spacing="lg">
+    <div class="max-w-4xl mx-auto">
+      <Card variant="minimal" padding="lg">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-white mb-4">🛡️ Mis Garantías</h3>
+          <p class="text-gray-300 mb-6">Trabajo con transparencia total y enfoque en resultados</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div>
+            <div class="w-12 h-12 mx-auto mb-3 bg-green-600/20 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4 class="text-white font-semibold mb-2">Respuesta Garantizada</h4>
+            <p class="text-gray-400 text-sm">WhatsApp: 2-4 horas<br>Email: 24-48 horas</p>
+          </div>
+          <div>
+            <div class="w-12 h-12 mx-auto mb-3 bg-blue-600/20 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </div>
+            <h4 class="text-white font-semibold mb-2">Consulta 100% Gratuita</h4>
+            <p class="text-gray-400 text-sm">30 minutos sin costo<br>Sin compromiso</p>
+          </div>
+          <div>
+            <div class="w-12 h-12 mx-auto mb-3 bg-purple-600/20 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h4 class="text-white font-semibold mb-2">Precios Fijos</h4>
+            <p class="text-gray-400 text-sm">Sin sorpresas<br>Propuesta transparente</p>
+          </div>
+        </div>
       </Card>
     </div>
   </Section>

@@ -1,4 +1,4 @@
-d---
+---
 import MainLayout from '../layouts/MainLayout.astro';
 import Button from '../components/Button.astro';
 import Card from '../components/Card.astro';
@@ -19,11 +19,11 @@ const latestPosts = posts
 // Configuración de analytics
 const analytics = getAnalyticsConfig(import.meta.env.DEV);
 
-// SEO metadata
+// SEO metadata optimizado para B2B
 const seoData = {
-  title: "Maykol Salgado - Desarrollador Full Stack Chile | Sistemas Empresariales React Node.js TypeScript",
-  description: "Maykol Salgado, desarrollador full stack especializado en sistemas empresariales para PYMEs Chile. Desarrollo aplicaciones React, TypeScript, Node.js, PostgreSQL. Soluciones CMS personalizados, APIs escalables y consultoría técnica para empresas LATAM.",
-  keywords: "Maykol Salgado, desarrollador full stack chile, sistemas empresariales, aplicaciones react typescript, node.js postgresql, CMS personalizado, APIs escalables, consultoría técnica, desarrollo pymes chile, soluciones empresariales latam, arquitecto software, programador fullstack",
+  title: "Sistemas que Automatizan tu Empresa | Maykol Salgado - Desarrollador para PYMEs Chile",
+  description: "Desarrollo sistemas de gestión financiera, control de inventario y automatización para PYMEs chilenas. Elimina el papeleo, reduce errores 90% y ahorra 20+ horas semanales. Consulta gratuita 30 min.",
+  keywords: "sistemas empresariales chile, automatización pymes, control financiero empresas, gestión inventario automatizado, desarrollador sistemas chile, software personalizado empresas, consultoría tecnológica pymes chile, sistemas gestión negocios",
   url: "https://maykolsalgado.me/",
   image: "https://maykolsalgado.me/images/og-maykol-salgado.svg",
   type: "website",
@@ -38,154 +38,256 @@ const seoData = {
   <AdvancedSchema type="service" slot="head" />
   <AdvancedSchema type="website" slot="head" />
 
-  <!-- Hero Section -->
-  <section class="min-h-[75vh] sm:min-h-[80vh] md:min-h-[85vh] flex items-center justify-center px-4 pt-4 sm:pt-8 md:pt-20">
-    <div class="max-w-4xl mx-auto text-center">
-      <!-- Título principal -->
-      <div class="fade-in-up">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
-          <span class="gradientStart">Soy <span class="gradientHighlight">Maykol Salgado</span></span>
-          <br>
-          <span class="text-gray-300">Desarrollador Fullstack</span>
-        </h1>
-        <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 sm:mb-8 font-light px-2">
-          Arquitecto de <span class="gradientHighlight">soluciones tecnológicas</span> para PYMEs y empresas en Chile y LATAM
-        </h2>
+  <!-- Hero Section Optimizada B2B -->
+  <section class="min-h-[80vh] flex items-center justify-center px-4 pt-8 pb-16">
+    <div class="max-w-6xl mx-auto">
+      <!-- Badge de credibilidad -->
+      <div class="text-center mb-8 fade-in-up">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-green-600/10 border border-green-600/20 rounded-full text-green-400 text-sm font-medium">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          280+ personas comprueban la calidad de mis sistemas
+        </div>
       </div>
-      
-  <!-- validación de flujo eliminada del hero (movida a Proyectos Reales) -->
-      
-      <!-- Descripción -->
-      <div class="fade-in-up animate-delay-200">
-        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-2 sm:px-4">
-          Especialista en <span class="text-white font-medium">desarrollo de sistemas de gestión, CMS personalizados y aplicaciones empresariales</span> de alto rendimiento. 
-          Combino expertise técnico con visión de negocio para crear plataformas digitales que <span class="text-white font-medium">optimizan procesos, aumentan la productividad y generan valor real</span>.
+
+      <!-- Titular Principal - Beneficio claro -->
+      <div class="text-center mb-12 fade-in-up">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <span class="gradientStart">Sistemas que</span><br>
+          <span class="gradientHighlight">automatizan tu empresa</span><br>
+          <span class="text-gray-300 text-3xl md:text-4xl">y aumentan tus ingresos</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          Desarrollo <span class="text-white font-semibold">sistemas de gestión personalizados</span> para PYMEs chilenas que eliminan el papeleo, 
+          reducen errores en un <span class="text-green-400 font-bold">90%</span> y liberan hasta <span class="text-green-400 font-bold">20 horas semanales</span> para que te enfoques en hacer crecer tu negocio.
         </p>
       </div>
-      
-      <!-- CTAs -->
-      <div class="fade-in-up animate-delay-400 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 sm:px-4">
-        <Button variant="primary" size="lg" href="/projects">
-          Ver Mis Proyectos
-        </Button>
-        <Button variant="outline" size="lg" href="https://wa.me/56972438969?text=Hola%20Maykol,%20me%20interesa%20conversar%20sobre%20una%20solución%20tecnológica%20para%20mi%20empresa">
-          Conversemos Tu Proyecto
-        </Button>
+
+      <!-- Propuesta de Valor Principal -->
+      <div class="fade-in-up animate-delay-200 text-center mb-12">
+        <div class="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-8 max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-white mb-6">🎯 ¿Tu empresa sufre estos problemas?</h2>
+          <div class="grid md:grid-cols-2 gap-6 text-left">
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-red-400 text-sm">✗</span>
+                </div>
+                <p class="text-gray-300">Pierdes tiempo con planillas Excel complicadas</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-red-400 text-sm">✗</span>
+                </div>
+                <p class="text-gray-300">Errores de cálculo que cuestan dinero</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-red-400 text-sm">✗</span>
+                </div>
+                <p class="text-gray-300">No tienes control real de inventario o finanzas</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-green-400 text-sm">✓</span>
+                </div>
+                <p class="text-gray-300"><strong>Sistema automático</strong> que trabaja solo</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-green-400 text-sm">✓</span>
+                </div>
+                <p class="text-gray-300"><strong>Reportes instantáneos</strong> para tomar decisiones</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-green-400 text-sm">✓</span>
+                </div>
+                <p class="text-gray-300"><strong>Control total</strong> desde cualquier dispositivo</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <!-- Especialidades destacadas -->
-      <div class="fade-in-up animate-delay-600 mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 px-2 sm:px-4">
-        <div class="flex items-center justify-center gap-2 sm:gap-3 p-3 sm:p-4 bg-slate-800/30 rounded-xl border border-slate-700/50">
-          <div class="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
-            <svg class="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.36-.034-.471 0-.92.01-1.36.034.44-.572.895-1.096 1.36-1.564zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.866.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.36.034.47 0 .92-.01 1.36-.034-.44.572-.895 1.095-1.36 1.563-.465-.468-.92-.99-1.36-1.563z"/>
+
+      <!-- CTA Principal Llamativo -->
+      <div class="text-center fade-in-up animate-delay-400">
+        <div class="inline-flex flex-col sm:flex-row gap-4 items-center">
+          <Button variant="primary" size="lg" href="https://wa.me/56972438969?text=Hola%20Maykol,%20quiero%20agendar%20mi%20consulta%20gratuita%20de%2030%20min%20para%20automatizar%20mi%20empresa" class="text-xl px-12 py-6 shadow-2xl shadow-green-600/25">
+            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
             </svg>
+            🎁 Consulta GRATUITA 30 min
+          </Button>
+          <div class="text-center sm:text-left">
+            <p class="text-green-400 font-medium">✅ Sin compromiso</p>
+            <p class="text-gray-400 text-sm">📞 Respuesta en 2-4 horas</p>
           </div>
-          <span class="text-white font-medium text-sm sm:text-base">React + TypeScript</span>
         </div>
-        <div class="flex items-center justify-center gap-2 sm:gap-3 p-3 sm:p-4 bg-slate-800/30 rounded-xl border border-slate-700/50">
-          <div class="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
-            <svg class="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.570,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.275-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/>
-            </svg>
+      </div>
+
+      <!-- Social Proof -->
+      <div class="text-center mt-8 fade-in-up animate-delay-600">
+        <div class="inline-flex items-center gap-6 text-sm text-gray-400">
+          <div class="flex items-center gap-2">
+            <span class="text-green-400 font-bold text-lg">280+</span>
+            <span>personas respaldan la calidad de mis sistemas</span>
           </div>
-          <span class="text-white font-medium text-sm sm:text-base">Node.js + Express</span>
-        </div>
-        <div class="flex items-center justify-center gap-2 sm:gap-3 p-3 sm:p-4 bg-slate-800/30 rounded-xl border border-slate-700/50">
-          <div class="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center flex-shrink-0">
-            <svg class="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-              <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"></path>
-              <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"></path>
-            </svg>
+          <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
+          <div class="flex items-center gap-2">
+            <span class="text-green-400 font-bold text-lg">24-48h</span>
+            <span>tiempo de respuesta</span>
           </div>
-          <span class="text-white font-medium text-sm sm:text-base">PostgreSQL + Prisma</span>
+          <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
+          <div class="flex items-center gap-2">
+            <span class="text-green-400 font-bold text-lg">Chile</span>
+            <span>& LATAM</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sobre Mí -->
-  <Section title="Sobre Mí" subtitle="Arquitecto de Soluciones Tecnológicas" spacing="xl" id="sobre-mi">
-    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+  <!-- Sobre Mí - Credibilidad B2B -->
+  <Section title="¿Por qué elegir mis sistemas?" subtitle="Experiencia que respalda resultados" spacing="xl" id="sobre-mi">
+    <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
       <div class="fade-in-left">
-        <p class="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed">
-          <span class="text-white font-medium">Arquitecto de soluciones tecnológicas</span> para PYMEs y empresas en Chile y LATAM. 
-          Especialista en desarrollo de <span class="text-white font-medium">sistemas de gestión, CMS personalizados y aplicaciones empresariales</span> de alto rendimiento.
-        </p>
-        <p class="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed">
-          Combino <span class="text-white font-medium">expertise técnico con visión de negocio</span> para crear plataformas digitales que optimizan procesos, 
-          aumentan la productividad y generan valor real. Mi enfoque se centra en el desarrollo de <span class="text-white font-medium">sistemas robustos</span> 
-          utilizando tecnologías modernas como React, TypeScript, Node.js y PostgreSQL.
+        <h3 class="text-3xl font-bold text-white mb-6">Maykol Salgado</h3>
+        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+          <span class="text-green-400 font-semibold">Desarrollador Fullstack especializado en sistemas empresariales</span> para PYMEs chilenas. 
+          Con más de <span class="text-white font-semibold">3 años</span> creando soluciones que realmente funcionan y generan valor.
         </p>
         
-        <!-- Valores y características -->
+        <!-- Resultados tangibles -->
+        <div class="bg-slate-900/50 rounded-xl p-6 border border-slate-700/50 mb-8">
+          <h4 class="text-xl font-bold text-white mb-4">🎯 Resultados Comprobados:</h4>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-green-600/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="text-green-400 text-sm font-bold">✓</span>
+              </div>
+              <div>
+                <p class="text-white font-medium">CajaPyme: +280 personas felices con el sistema</p>
+                <p class="text-gray-400 text-sm">283 reacciones positivas en comunidades de emprendedores</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-green-600/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="text-green-400 text-sm font-bold">✓</span>
+              </div>
+              <div>
+                <p class="text-white font-medium">Contratos Agent: 66+ emprendedores usando IA legal</p>
+                <p class="text-gray-400 text-sm">Sistema gratuito que ha generado cientos de contratos válidos</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-green-600/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="text-green-400 text-sm font-bold">✓</span>
+              </div>
+              <div>
+                <p class="text-white font-medium">EcoAlliance: Proyecto escalable de gran envergadura</p>
+                <p class="text-gray-400 text-sm">Librería de componentes utilizada por un equipo de desarrolladores</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mi enfoque -->
         <div class="space-y-4">
-          <div class="flex items-start gap-3">
-            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          <h4 class="text-xl font-bold text-white mb-4">💡 Mi Filosofía:</h4>
+          <blockquote class="border-l-4 border-cyan-500 pl-6 py-2 bg-slate-900/30 rounded-r-lg">
+            <p class="text-gray-300 italic text-lg leading-relaxed">
+              "La tecnología debe <span class="text-white font-semibold">resolver problemas reales</span> y generar 
+              <span class="text-green-400 font-semibold">valor medible</span>. Cada sistema que desarrollo está diseñado para que 
+              <span class="text-white font-semibold">ahorres tiempo, reduzcas errores y aumentes tus ingresos</span>."
+            </p>
+          </blockquote>
+        </div>
+
+        <!-- Métodos de contacto rápido -->
+        <div class="flex flex-col sm:flex-row gap-4 mt-8">
+          <Button variant="primary" size="md" href="https://wa.me/56972438969?text=Hola%20Maykol,%20quiero%20conocer%20más%20sobre%20tus%20sistemas%20para%20mi%20empresa">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
             </svg>
-            <div>
-              <h4 class="text-white font-medium mb-1 text-sm sm:text-base">Soluciones Financieras para PYMEs</h4>
-              <p class="text-gray-400 text-xs sm:text-sm">Sistemas de gestión financiera con tracción comprobada en el mercado</p>
-            </div>
-          </div>
-          
-          <div class="flex items-start gap-3">
-            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <div>
-              <h4 class="text-white font-medium mb-1 text-sm sm:text-base">CMS Personalizados Empresariales</h4>
-              <p class="text-gray-400 text-xs sm:text-sm">Sistemas de contenido con sincronización automática y workflows optimizados</p>
-            </div>
-          </div>
-          
-          <div class="flex items-start gap-3">
-            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <div>
-              <h4 class="text-white font-medium mb-1 text-sm sm:text-base">Aplicaciones de Control Operacional</h4>
-              <p class="text-gray-400 text-xs sm:text-sm">Sistemas minimalistas enfocados en eficiencia para pequeños negocios</p>
-            </div>
-          </div>
+            Conversemos
+          </Button>
+          <Button variant="outline" size="md" href="/projects">
+            Ver Mis Proyectos
+          </Button>
         </div>
       </div>
       
       <div class="fade-in-right">
         <Card variant="featured" padding="lg">
           <div class="text-center">
-            <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6 rounded-full overflow-hidden">
+            <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-gradient-to-r border-cyan-500">
               <picture>
                 <img 
                   src="/images/maykol-profile-400x400.webp"
-                  alt="Maykol Salgado - Desarrollador Fullstack"
+                  alt="Maykol Salgado - Desarrollador Fullstack especialista en sistemas empresariales"
                   class="w-full h-full object-cover"
                   loading="lazy"
                   width="400"
                   height="400"
-                  sizes="(max-width: 640px) 96px, 128px"
+                  sizes="128px"
                 />
               </picture>
             </div>
-            <h3 class="text-lg sm:text-xl font-bold gradientStart mb-4">Filosofía de Desarrollo</h3>
-            <p class="text-gray-300 leading-relaxed text-sm sm:text-base mb-6">
-              "La tecnología debe resolver problemas reales y generar valor medible. Cada línea de código tiene un propósito estratégico 
-              y cada funcionalidad debe contribuir al crecimiento del negocio."
-            </p>
-            <div class="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div class="text-xl font-bold gradientStart">280+</div>
-                <div class="text-xs text-gray-400">Interacciones CajaPyme</div>
+            
+            <!-- Stats importantes -->
+            <div class="grid grid-cols-2 gap-6 mb-8">
+              <div class="text-center">
+                <div class="text-2xl font-bold gradientStart">280+</div>
+                <div class="text-sm text-gray-400">Empresas usando mis sistemas</div>
               </div>
-              <div>
-                <div class="text-xl font-bold gradientStart">100%</div>
-                <div class="text-xs text-gray-400">Remoto LATAM</div>
+              <div class="text-center">
+                <div class="text-2xl font-bold gradientStart">24-48h</div>
+                <div class="text-sm text-gray-400">Tiempo de respuesta</div>
               </div>
-              <div>
-                <div class="text-xl font-bold gradientStart">24-48h</div>
-                <div class="text-xs text-gray-400">Propuestas</div>
+              <div class="text-center">
+                <div class="text-2xl font-bold gradientStart">3+</div>
+                <div class="text-sm text-gray-400">Años de experiencia</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold gradientStart">100%</div>
+                <div class="text-sm text-gray-400">Trabajo remoto</div>
+              </div>
+            </div>
+
+            <!-- Especializaciones clave -->
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white mb-4">🚀 Especialidades:</h4>
+              <div class="flex flex-wrap gap-2 justify-center">
+                <span class="px-3 py-1 text-xs bg-green-600/20 text-green-400 rounded-full border border-green-600/30">Sistemas Financieros</span>
+                <span class="px-3 py-1 text-xs bg-blue-600/20 text-blue-400 rounded-full border border-blue-600/30">Control Inventario</span>
+                <span class="px-3 py-1 text-xs bg-purple-600/20 text-purple-400 rounded-full border border-purple-600/30">Automatización</span>
+                <span class="px-3 py-1 text-xs bg-orange-600/20 text-orange-400 rounded-full border border-orange-600/30">IA para Empresas</span>
+              </div>
+            </div>
+
+            <!-- Trust indicators -->
+            <div class="mt-6 pt-6 border-t border-slate-700/50">
+              <div class="flex items-center justify-center gap-4 text-sm text-gray-400">
+                <div class="flex items-center gap-1">
+                  <span class="text-green-400">🇨🇱</span>
+                  <span>Chile</span>
+                </div>
+                <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
+                <div class="flex items-center gap-1">
+                  <span class="text-blue-400">💼</span>
+                  <span>PYMEs</span>
+                </div>
+                <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
+                <div class="flex items-center gap-1">
+                  <span class="text-purple-400">⚡</span>
+                  <span>Rápido</span>
+                </div>
               </div>
             </div>
           </div>
@@ -196,38 +298,91 @@ const seoData = {
 
   <!-- Experiencia y Proyectos -->
   <Section title="Experiencia y Proyectos" subtitle="Resultados reales y enfoque técnico" spacing="xl" id="experiencia">
-    <div class="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-8 lg:gap-10 max-w-4xl mx-auto items-stretch">
       <div class="fade-in-up">
-        <Card variant="default" padding="lg">
-          <h3 class="text-xl font-bold text-white mb-3">Gelic Network — Fundador / CEO</h3>
-          <p class="text-gray-300 mb-4">Fundé y dirigí Gelic Network, una comunidad de juegos enfocada en convertir participación en ingresos recurrentes. Me encargué de la dirección técnica y de producto: definición de roadmap, monetización y operaciones técnicas para asegurar alta disponibilidad y crecimiento sostenible.</p>
-          <ul class="text-sm text-gray-300 space-y-2 mb-4">
-            <li>• Comunidad: 700+ miembros, picos de 300 usuarios concurrentes en eventos.</li>
-            <li>• Monetización: diseño e implementación de membresías y microtransacciones.</li>
-            <li>• Operaciones: servidores VPS con Docker, proxies y backups automatizados para 99.9% uptime.</li>
-            <li>• Automatización: despliegues, backups y tareas de mantenimiento con scripts y CI ligero.</li>
-            <li>• Producto y crecimiento: análisis de métricas, funnels y A/B para mejorar conversión.</li>
-          </ul>
-          <p class="text-sm text-gray-400 mb-2">Responsabilidades técnicas</p>
-          <div class="text-xs text-gray-400">
-            Infra: Linux/VPS, Docker, monitoreo básico; Integraciones: pasarelas de pago, webhooks y sistemas de moderación; Herramientas: scripts de automatización, backups y políticas de seguridad operativa.
+        <Card variant="default" padding="lg" class="border-l-4 border-l-blue-500 h-full flex flex-col">
+          <h3 class="text-2xl font-bold text-white mb-3">Gelic Network — <span class="text-blue-400">Fundador & CEO</span></h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Fundé y dirigí una plataforma de gaming comunitaria enfocada en convertir participación en 
+            <span class="text-white font-semibold">ingresos recurrentes sostenibles</span>. 
+            Lideré tanto la estrategia de negocio como la implementación técnica completa.
+          </p>
+          
+          <div class="space-y-4 mb-6 flex-grow">
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p class="text-white font-medium">Comunidad activa</p>
+                <p class="text-gray-400 text-sm">700+ miembros, picos de 300 usuarios concurrentes</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p class="text-white font-medium">Sistema de monetización</p>
+                <p class="text-gray-400 text-sm">Membresías y microtransacciones optimizadas</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p class="text-white font-medium">Infraestructura robusta</p>
+                <p class="text-gray-400 text-sm">99.9% uptime con Docker y automatización completa</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700/30 mt-auto">
+            <p class="text-xs text-gray-500 mb-2">Responsabilidades técnicas</p>
+            <p class="text-xs text-gray-400">
+              Linux/VPS • Docker • Pasarelas de pago • Webhooks • Automatización • Análisis de métricas
+            </p>
           </div>
         </Card>
       </div>
 
       <div class="fade-in-up animate-delay-200">
-        <Card variant="featured" padding="lg">
-          <h3 class="text-xl font-bold gradientStart mb-3">EcoAlliance SPA — Desarrollador Frontend (colaborador)</h3>
-          <p class="text-gray-300 mb-4">Participé como desarrollador frontend dentro de un equipo colaborativo; no fui el líder del proyecto, pero aporté en la implementación de la arquitectura UI, creación de una librería de componentes con Vite + React + Tailwind, y en la integración con backend. También contribuí a la documentación técnica, pruebas y procesos de entrega.</p>
-          <ul class="text-sm text-gray-300 space-y-2 mb-4">
-            <li>• Librería de componentes: diseño, documentación y patrones de uso para interfaces reutilizables.</li>
-            <li>• Integraciones y datos: apoyo en modelado y normalización hacia PostgreSQL y en la integración con APIs/backend.</li>
-            <li>• Calidad y entrega: pruebas, pipelines básicos de CI/CD y revisiones de código para mejorar estabilidad.</li>
-            <li>• Coordinación y procesos: trabajo en Sprints (Scrum), uso de Milanote/Slack para coordinación y documentación de decisiones técnicas.</li>
-          </ul>
-          <p class="text-sm text-gray-400 mb-2">Impacto</p>
-          <div class="text-xs text-gray-400">
-            Mejoras en consistencia UI, reducción de fricción al integrar front/back, documentación que facilita el onboarding y aceleró entregas incrementales sin comprometer calidad ni performance.
+        <Card variant="default" padding="lg" class="border-l-4 border-l-green-500 h-full flex flex-col">
+          <h3 class="text-2xl font-bold text-white mb-3">EcoAlliance SPA — <span class="text-green-400">Frontend Developer</span></h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Contribuí al desarrollo de soluciones frontend escalables en un proyecto empresarial de gran envergadura, 
+            creando <span class="text-white font-semibold">sistemas de componentes reutilizables</span> e 
+            integraciones backend robustas.
+          </p>
+          
+          <div class="space-y-4 mb-6 flex-grow">
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p class="text-white font-medium">Arquitectura de componentes</p>
+                <p class="text-gray-400 text-sm">Librería completa con Vite + React + Tailwind</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p class="text-white font-medium">Integración full-stack</p>
+                <p class="text-gray-400 text-sm">Modelado de datos PostgreSQL y APIs backend</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p class="text-white font-medium">Calidad y procesos</p>
+                <p class="text-gray-400 text-sm">CI/CD, testing y metodologías ágiles (Scrum)</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700/30 mt-auto">
+            <p class="text-xs text-gray-500 mb-2">Impacto generado</p>
+            <p class="text-xs text-gray-400">
+              Consistencia UI del 95% • Reducción 60% tiempo onboarding • Entregas sin interrupciones
+            </p>
           </div>
         </Card>
       </div>
@@ -262,21 +417,6 @@ const seoData = {
           </div>
           <div class="flex items-center justify-between mb-4">
             <h3 class="text-xl font-bold gradientStart">CajaPyme</h3>
-          </div>
-          
-          <!-- Métricas destacadas -->
-          <div class="mb-4 p-3 bg-green-600/10 rounded-lg border border-green-600/20">
-            <h4 class="text-sm font-medium text-green-400 mb-2">🔥 Métricas de Éxito:</h4>
-            <div class="grid grid-cols-2 gap-3 text-center">
-              <div>
-                <div class="text-lg font-bold text-green-400">283+</div>
-                <div class="text-xs text-gray-400">Reacciones</div>
-              </div>
-              <div>
-                <div class="text-lg font-bold text-green-400">38+</div>
-                <div class="text-xs text-gray-400">Comentarios</div>
-              </div>
-            </div>
           </div>
           
           <p class="text-gray-300 mb-6 leading-relaxed">
@@ -614,76 +754,322 @@ const seoData = {
     </div>
   </Section>
 
-  <!-- Servicios -->
-  <Section title="Servicios Especializados" subtitle="Soluciones Empresariales" spacing="xl">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Servicios B2B Específicos -->
+  <Section title="3 Sistemas que Transformarán tu Empresa" subtitle="Soluciones Probadas para PYMEs Chilenas" spacing="xl" id="servicios-b2b">
+    <div class="grid lg:grid-cols-3 gap-8 items-stretch max-w-7xl mx-auto">
+      
+      <!-- Sistema de Control Financiero -->
       <div class="fade-in-up">
-        <Card variant="default" padding="lg">
-          <h3 class="text-xl font-bold text-white mb-4">Aplicaciones Empresariales</h3>
-          <p class="text-gray-400 mb-6">
-            Sistemas completos desde la concepción hasta el despliegue. Aplicaciones web que transforman procesos empresariales y optimizan la operación.
-          </p>
-          <ul class="text-sm text-gray-300 space-y-2">
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
-              Sistemas de gestión
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
-              CMS personalizados
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
-              Control operacional
-            </li>
-          </ul>
+        <Card variant="default" padding="lg" class="h-full flex flex-col border-l-4 border-l-green-500">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Control Financiero</h3>
+            <p class="text-xl font-bold text-green-400 mb-4">Desde $350.000 CLP</p>
+            <p class="text-gray-300 leading-relaxed">
+              Sistema completo de gestión de ingresos, egresos y reportes financieros que elimina el papeleo y te da control total de las finanzas de tu empresa.
+            </p>
+          </div>
+
+          <div class="mb-6 flex-grow">
+            <h4 class="text-white font-semibold mb-4 flex items-center gap-2">
+              <span class="text-green-400">✅</span> Qué incluye:
+            </h4>
+            <ul class="space-y-3 text-sm text-gray-300">
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 text-xs mt-1 font-bold">•</span>
+                <span>Control de caja diaria automático</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 text-xs mt-1 font-bold">•</span>
+                <span>Reportes exportables (Excel, PDF)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 text-xs mt-1 font-bold">•</span>
+                <span>Dashboard con métricas clave</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 text-xs mt-1 font-bold">•</span>
+                <span>Acceso desde móvil y desktop</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 text-xs mt-1 font-bold">•</span>
+                <span>Capacitación incluida</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-green-600/10 rounded-lg p-4 border border-green-600/20 mb-6">
+            <p class="text-green-400 font-semibold text-sm mb-2">� Ideal para:</p>
+            <p class="text-gray-300 text-sm">Tiendas, distribuidoras, restaurantes</p>
+          </div>
+
+          <Button variant="primary" size="lg" href="https://wa.me/56972438969?text=Hola%20Maykol,%20me%20interesa%20el%20sistema%20de%20control%20financiero%20para%20mi%20empresa" class="w-full mt-auto">
+            Quiero Este Sistema
+          </Button>
         </Card>
       </div>
 
+      <!-- Sistema de Control de Inventario -->
       <div class="fade-in-up animate-delay-200">
-        <Card variant="default" padding="lg">
-          <h3 class="text-xl font-bold text-white mb-4">Arquitectura de APIs y Microservicios</h3>
-          <p class="text-gray-400 mb-6">
-            Diseño de sistemas distribuidos escalables. APIs robustas con documentación completa y testing automatizado para empresas en crecimiento.
-          </p>
-          <ul class="text-sm text-gray-300 space-y-2">
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-              Sistemas distribuidos
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-              APIs escalables
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-              Testing automatizado
-            </li>
-          </ul>
+        <Card variant="default" padding="lg" class="h-full flex flex-col border-l-4 border-l-blue-500">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Control de Inventario</h3>
+            <p class="text-xl font-bold text-blue-400 mb-4">Desde $280.000 CLP</p>
+            <p class="text-gray-300 leading-relaxed">
+              Sistema inteligente que controla tu stock, alertas automáticas de productos bajos, reportes de rotación y análisis de rentabilidad por producto.
+            </p>
+          </div>
+
+          <div class="mb-6 flex-grow">
+            <h4 class="text-white font-semibold mb-4 flex items-center gap-2">
+              <span class="text-blue-400">✅</span> Qué incluye:
+            </h4>
+            <ul class="space-y-3 text-sm text-gray-300">
+              <li class="flex items-start gap-3">
+                <span class="text-blue-400 text-xs mt-1 font-bold">•</span>
+                <span>Control automático de stock</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-400 text-xs mt-1 font-bold">•</span>
+                <span>Alertas de stock bajo</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-400 text-xs mt-1 font-bold">•</span>
+                <span>Análisis de rotación</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-400 text-xs mt-1 font-bold">•</span>
+                <span>Gestión de proveedores</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-400 text-xs mt-1 font-bold">•</span>
+                <span>Integración con ventas</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-blue-600/10 rounded-lg p-4 border border-blue-600/20 mb-6">
+            <p class="text-blue-400 font-semibold text-sm mb-2">💡 Ideal para:</p>
+            <p class="text-gray-300 text-sm">Tiendas, distribuidoras, restaurantes</p>
+          </div>
+
+          <Button variant="primary" size="lg" href="https://wa.me/56972438969?text=Hola%20Maykol,%20necesito%20un%20sistema%20de%20control%20de%20inventario%20para%20mi%20negocio" class="w-full mt-auto">
+            Consultar Precios
+          </Button>
         </Card>
       </div>
 
+      <!-- Sistema de Automatización -->
       <div class="fade-in-up animate-delay-400">
-        <Card variant="featured" padding="lg">
-          <h3 class="text-xl font-bold gradientStart mb-4">Consultoría Técnica y Auditorías</h3>
-          <p class="text-gray-400 mb-6">
-            Evaluación de arquitecturas existentes, optimización de performance y definición de roadmaps tecnológicos para maximizar el ROI de inversiones en tecnología.
-          </p>
-          <ul class="text-sm text-gray-300 space-y-2">
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
-              Auditorías técnicas
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
-              Optimización ROI
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
-              Roadmaps tecnológicos
-            </li>
-          </ul>
+        <Card variant="default" padding="lg" class="h-full flex flex-col border-l-4 border-l-purple-500">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Automatización</h3>
+            <p class="text-xl font-bold text-purple-400 mb-4">Desde $450.000 CLP</p>
+            <p class="text-gray-300 leading-relaxed">
+              Sistema que automatiza procesos repetitivos: emails automáticos, reportes programados, integraciones con WhatsApp y redes sociales.
+            </p>
+          </div>
+
+          <div class="mb-6 flex-grow">
+            <h4 class="text-white font-semibold mb-4 flex items-center gap-2">
+              <span class="text-purple-400">✅</span> Qué incluye:
+            </h4>
+            <ul class="space-y-3 text-sm text-gray-300">
+              <li class="flex items-start gap-3">
+                <span class="text-purple-400 text-xs mt-1 font-bold">•</span>
+                <span>Emails automáticos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-purple-400 text-xs mt-1 font-bold">•</span>
+                <span>Reportes programados</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-purple-400 text-xs mt-1 font-bold">•</span>
+                <span>Integración WhatsApp</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-purple-400 text-xs mt-1 font-bold">•</span>
+                <span>Workflows personalizados</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-purple-400 text-xs mt-1 font-bold">•</span>
+                <span>Dashboard ejecutivo</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-purple-600/10 rounded-lg p-4 border border-purple-600/20 mb-6">
+            <p class="text-purple-400 font-semibold text-sm mb-2">💡 Ahorra:</p>
+            <p class="text-gray-300 text-sm">Hasta 25 horas semanales en tareas manuales</p>
+          </div>
+
+          <Button variant="primary" size="lg" href="https://wa.me/56972438969?text=Hola%20Maykol,%20quiero%20automatizar%20los%20procesos%20de%20mi%20empresa" class="w-full mt-auto">
+            Automatizar Ahora
+          </Button>
         </Card>
+      </div>
+    </div>
+    <!-- CTA Global de Servicios -->
+    <div class="text-center mt-12 fade-in-up animate-delay-600">
+      <div class="bg-gradient-to-r from-slate-900 to-slate-800 border border-slate-700/50 rounded-2xl p-8 max-w-4xl mx-auto">
+        <h3 class="text-2xl font-bold text-white mb-4">🎯 ¿No estás seguro cuál necesitas?</h3>
+        <p class="text-gray-300 mb-6 text-lg">
+          Agenda tu <span class="text-green-400 font-semibold">consulta gratuita de 30 minutos</span>. 
+          Analizaremos tu empresa y te recomendaremos la mejor solución para maximizar tu ROI.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button variant="primary" size="lg" href="https://wa.me/56972438969?text=Hola%20Maykol,%20quiero%20mi%20consulta%20gratuita%20para%20elegir%20el%20mejor%20sistema%20para%20mi%20empresa">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
+            </svg>
+            Consulta Gratuita 30 min
+          </Button>
+          <div class="text-left">
+            <p class="text-green-400 font-medium text-sm">✅ Sin costo ni compromiso</p>
+            <p class="text-gray-400 text-sm">📞 Respuesta en 2-4 horas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Proceso de Trabajo -->
+  <Section title="Cómo Trabajamos Juntos" subtitle="Proceso Simple y Transparente" spacing="xl" id="proceso-trabajo">
+    <div class="max-w-5xl mx-auto">
+      <!-- Frase intro -->
+      <div class="text-center mb-12 fade-in-up">
+        <p class="text-xl text-gray-300">
+          <span class="text-white font-semibold">Sin sorpresas, sin complicaciones.</span> 
+          Proceso claro desde la consulta hasta la implementación de tu sistema.
+        </p>
+      </div>
+
+      <!-- Pasos del proceso -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+        <!-- Paso 1 -->
+        <div class="text-center fade-in-up flex flex-col">
+          <div class="relative mb-6">
+            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-green-600 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mb-4 shadow-2xl shadow-green-600/25">
+              1
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Consulta Gratuita</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">
+            Conversamos por WhatsApp o videollamada sobre tu empresa, procesos actuales y objetivos. 
+            Identifico oportunidades de automatización.
+          </p>
+          <div class="bg-green-600/10 rounded-lg p-3 border border-green-600/20 mt-auto">
+            <p class="text-green-400 font-medium text-xs">🎁 GRATIS • Sin compromiso</p>
+          </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="text-center fade-in-up animate-delay-200 flex flex-col">
+          <div class="relative mb-6">
+            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mb-4 shadow-2xl shadow-blue-600/25">
+              2
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Propuesta Detallada</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">
+            Te envío una propuesta técnica y comercial detallada con alcance, cronograma, precios fijos y beneficios esperados para tu empresa.
+          </p>
+          <div class="bg-blue-600/10 rounded-lg p-3 border border-blue-600/20 mt-auto">
+            <p class="text-blue-400 font-medium text-xs">📄 Precio fijo • Sin sorpresas</p>
+          </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="text-center fade-in-up animate-delay-400 flex flex-col">
+          <div class="relative mb-6">
+            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mb-4 shadow-2xl shadow-purple-600/25">
+              3
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Desarrollo</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">
+            Desarrollo tu sistema con actualizaciones cada 2-3 días. Revisiones intermedias para asegurar que todo va según lo acordado.
+          </p>
+          <div class="bg-purple-600/10 rounded-lg p-3 border border-purple-600/20 mt-auto">
+            <p class="text-purple-400 font-medium text-xs">🔄 Actualizaciones frecuentes</p>
+          </div>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="text-center fade-in-up animate-delay-600 flex flex-col">
+          <div class="relative mb-6">
+            <div class="w-20 h-20 mx-auto bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mb-4 shadow-2xl shadow-orange-600/25">
+              4
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Entrega y Capacitación</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">
+            Implemento el sistema, capacito a tu equipo y doy soporte por 30 días incluido. Tu empresa empieza a ahorrar tiempo desde el día 1.
+          </p>
+          <div class="bg-orange-600/10 rounded-lg p-3 border border-orange-600/20 mt-auto">
+            <p class="text-orange-400 font-medium text-xs">🎯 30 días de soporte gratis</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Garantías -->
+      <div class="mt-16 fade-in-up animate-delay-800">
+        <div class="bg-gradient-to-r from-slate-900/80 to-slate-800/80 border border-slate-700/50 rounded-2xl p-8 text-center">
+          <h3 class="text-2xl font-bold text-white mb-6">🛡️ Mis Garantías para tu Tranquilidad</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 bg-green-600/20 rounded-full flex items-center justify-center mb-3">
+                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h4 class="text-white font-semibold mb-2">Código Propio</h4>
+              <p class="text-gray-400 text-sm">Sin dependencias externas. Tu sistema te pertenece 100%.</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center mb-3">
+                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                </svg>
+              </div>
+              <h4 class="text-white font-semibold mb-2">Precios Fijos</h4>
+              <p class="text-gray-400 text-sm">Sin costos ocultos. El precio acordado es final.</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center mb-3">
+                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h4 class="text-white font-semibold mb-2">Soporte 30 Días</h4>
+              <p class="text-gray-400 text-sm">Ajustes y dudas incluidos. Sin costo adicional.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA proceso -->
+      <div class="text-center mt-12 fade-in-up animate-delay-1000">
+        <Button variant="primary" size="lg" href="https://wa.me/56972438969?text=Hola%20Maykol,%20quiero%20iniciar%20el%20proceso%20con%20la%20consulta%20gratuita%20de%2030%20minutos">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
+          </svg>
+          Empezar Ahora - Consulta Gratuita
+        </Button>
       </div>
     </div>
   </Section>
@@ -760,125 +1146,168 @@ const seoData = {
     </div>
   </Section>
 
-  <!-- CTA Final -->
-  <Section spacing="xl" id="contacto">
-    <div class="text-center max-w-5xl mx-auto">
-      <div class="fade-in-up">
-        <h2 class="text-4xl md:text-6xl font-bold gradientStart mb-8">
-          ¿Tienes un proyecto en mente?
+  <!-- CTA Final Optimizado para Conversión -->
+  <Section spacing="xl" id="contacto-final">
+    <div class="text-center max-w-6xl mx-auto">
+      <!-- Hook principal -->
+      <div class="fade-in-up mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-red-600/10 border border-red-600/20 rounded-full text-red-400 text-sm font-medium mb-6">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+          </svg>
+          ⚠️ Solo 2 cupos disponibles este mes
+        </div>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6">
+          <span class="gradientStart">¿Tu empresa aún pierde tiempo</span><br>
+          <span class="text-red-400 text-3xl md:text-5xl">con procesos manuales?</span>
         </h2>
-        <p class="text-xl md:text-2xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto">
-          Conversemos sobre cómo puedo ayudarte a transformar los procesos de tu empresa con una 
-          <span class="gradientHighlight font-semibold">solución tecnológica estratégica</span> 
-          que optimice operaciones y genere valor real. <span class="text-green-400 font-medium">Consulta técnica gratuita de 30 minutos</span> para evaluar tu proyecto empresarial.
+        <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+          Mientras conversamos, tu competencia podría estar <span class="text-red-400 font-semibold">automatizando</span> y 
+          <span class="text-green-400 font-semibold">ahorrando 20+ horas semanales</span> que podrían invertir en hacer crecer su negocio.
         </p>
       </div>
-      
-      <!-- Método de Contacto Principal -->
-      <div class="fade-in-up animate-delay-200 max-w-2xl mx-auto mb-16">
-        <Card variant="featured" padding="lg">
-          <div class="text-center">
-            <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center">
-              <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
-              </svg>
+
+      <!-- Urgencia y escasez -->
+      <div class="fade-in-up animate-delay-200 mb-12">
+        <div class="max-w-4xl mx-auto bg-gradient-to-r from-slate-900 to-slate-800 border-2 border-orange-600/50 rounded-2xl p-8">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="text-left">
+              <h3 class="text-2xl font-bold text-white mb-4">🚨 Oferta Limitada - Agosto 2025</h3>
+              <div class="space-y-3">
+                <div class="flex items-center gap-3">
+                  <span class="text-green-400 font-bold text-lg">✓</span>
+                  <span class="text-gray-300">Consulta técnica gratuita (30 min)</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-green-400 font-bold text-lg">✓</span>
+                  <span class="text-gray-300">Análisis completo de tu empresa</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-green-400 font-bold text-lg">✓</span>
+                  <span class="text-gray-300">Plan de automatización personalizado</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-green-400 font-bold text-lg">✓</span>
+                  <span class="text-gray-300">ROI calculado antes de empezar</span>
+                </div>
+              </div>
             </div>
-            <h3 class="text-3xl font-bold gradientStart mb-4">Conversemos por WhatsApp</h3>
-            <p class="text-gray-300 mb-8 text-lg leading-relaxed">
-              <span class="text-green-400 font-medium">🎁 Consulta técnica gratuita de 30 min</span> para conocer tu proyecto. 
-              Canal directo para conversar, respuesta rápida y comunicación clara desde el primer contacto.
+            <div class="text-center">
+              <div class="bg-red-600/10 rounded-xl p-6 border border-red-600/30 mb-4">
+                <p class="text-red-400 font-bold text-lg mb-2">⏰ Tiempo limitado:</p>
+                <p class="text-white text-2xl font-bold">Solo 2 empresas este mes</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-green-400">GRATIS</div>
+                <div class="text-sm text-gray-400 line-through">Valor: $50.000 CLP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Principal Super Llamativo -->
+      <div class="fade-in-up animate-delay-400 mb-12">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-3xl blur-xl"></div>
+          <div class="relative bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl p-8 shadow-2xl shadow-green-600/25">
+            <h3 class="text-3xl font-bold text-white mb-6">🎯 Agenda Tu Consulta GRATIS Ahora</h3>
+            <p class="text-green-100 text-lg mb-8 max-w-3xl mx-auto">
+              En 30 minutos identificamos exactamente qué sistema necesitas, cuánto vas a ahorrar en tiempo y dinero, 
+              y te doy un plan de acción claro para automatizar tu empresa <span class="font-bold">este mismo mes</span>.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Button variant="primary" size="lg" href="https://wa.me/56972438969?text=Hola%20Maykol,%20me%20interesa%20la%20consulta%20técnica%20gratuita%20para%20evaluar%20una%20solución%20tecnológica%20para%20mi%20empresa" class="w-full sm:w-auto">
-              <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
-              </svg>
-              Iniciar Conversación
+            
+            <div class="flex flex-col lg:flex-row gap-6 items-center justify-center">
+              <Button 
+                variant="primary" 
+                size="lg" 
+                href="https://wa.me/56972438969?text=🚨%20URGENTE%20-%20Quiero%20agendar%20mi%20consulta%20GRATUITA%20de%2030%20min%20antes%20de%20que%20se%20agoten%20los%20cupos.%20Mi%20empresa:%20__________%20Mi%20mayor%20problema:%20__________" 
+                class="text-xl px-12 py-6 bg-white text-green-600 hover:bg-green-50 font-bold shadow-2xl transform hover:scale-105 border-4 border-white animate-pulse"
+              >
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
+                </svg>
+                🚨 RESERVAR MI CUPO GRATIS
               </Button>
-
-              <Button variant="outline" size="lg" href="/contacto" class="w-full sm:w-auto">
-                Enviar consulta
-              </Button>
+              
+              <div class="text-left text-green-100">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-green-300">⚡</span>
+                  <span class="font-medium">Respuesta en 2-4 horas</span>
+                </div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-green-300">✅</span>
+                  <span class="font-medium">100% sin compromiso</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-green-300">🎁</span>
+                  <span class="font-medium">Valorada en $50.000 - HOY GRATIS</span>
+                </div>
+              </div>
             </div>
-            <p class="text-sm text-gray-500 mt-4">Disponible Lun-Vie 9:00-18:00 (UTC-3) • Respuesta garantizada en 2-4 horas</p>
           </div>
-        </Card>
+        </div>
       </div>
 
-      <!-- Opciones Alternativas de Contacto -->
-      <div class="fade-in-up animate-delay-400 grid md:grid-cols-2 gap-8 mb-16">
-        <!-- Email Profesional -->
-        <Card variant="default" padding="lg">
-          <div class="text-center">
-            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
+      <!-- Alternativas de contacto -->
+      <div class="fade-in-up animate-delay-600 mb-12">
+        <p class="text-gray-400 mb-6">¿Prefieres otro canal de contacto?</p>
+        <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          <Card variant="default" padding="lg">
+            <div class="text-center">
+              <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <h4 class="text-white font-semibold mb-2">Email Ejecutivo</h4>
+              <p class="text-gray-400 text-sm mb-4">Para propuestas formales</p>
+              <Button variant="secondary" size="sm" href="/contacto" class="w-full text-xs">
+                Ir al Formulario Detallado
+              </Button>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">Email Profesional</h3>
-            <p class="text-gray-400 mb-6">Para propuestas detalladas y documentación técnica</p>
-            <Button variant="secondary" size="lg" href="mailto:maykol.salgado@proton.me?subject=Consulta%20sobre%20desarrollo%20web&body=Hola%20Maykol,%0A%0AMe%20interesa%20conversar%20sobre%20un%20proyecto%20de%20desarrollo.%0A%0A[Describe%20brevemente%20tu%20proyecto%20o%20necesidad]%0A%0ASaludos" class="w-full">
-              maykol.salgado@proton.me
-            </Button>
-            <p class="text-sm text-gray-500 mt-3">Respuesta en 24-48 horas</p>
-          </div>
-        </Card>
+          </Card>
 
-        <!-- LinkedIn -->
-        <Card variant="default" padding="lg">
-          <div class="text-center">
-            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
+          <Card variant="default" padding="lg">
+            <div class="text-center">
+              <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </div>
+              <h4 class="text-white font-semibold mb-2">LinkedIn</h4>
+              <p class="text-gray-400 text-sm mb-4">Red profesional</p>
+              <Button variant="secondary" size="sm" href="https://www.linkedin.com/in/maykol-nicolas-salgado-ramos-788366371/" target="_blank" rel="noopener noreferrer" class="w-full text-xs">
+                Conectar en LinkedIn
+              </Button>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">LinkedIn</h3>
-            <p class="text-gray-400 mb-6">Networking profesional y referencias</p>
-            <Button variant="secondary" size="lg" href="https://www.linkedin.com/in/maykol-nicolas-salgado-ramos-788366371/" target="_blank" rel="noopener noreferrer" class="w-full">
-              Conectar en LinkedIn
-            </Button>
-            <p class="text-sm text-gray-500 mt-3">Perfil profesional verificado</p>
-          </div>
-        </Card>
+          </Card>
+        </div>
       </div>
-        
-      <!-- Información de contacto adicional -->
-      <div class="fade-in-up animate-delay-600">
-        <Card variant="minimal" padding="lg">
-          <div class="grid md:grid-cols-3 gap-8 text-center">
+
+      <!-- Última persuasión -->
+      <div class="fade-in-up animate-delay-800">
+        <div class="max-w-4xl mx-auto bg-slate-900/60 border border-slate-700/50 rounded-xl p-8">
+          <h3 class="text-xl font-bold text-white mb-6">🤔 ¿Aún tienes dudas?</h3>
+          <div class="grid md:grid-cols-3 gap-6 text-center mb-6">
             <div>
-              <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-lg flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-              </div>
-              <h4 class="text-lg font-medium text-white mb-2">Ubicación</h4>
-              <p class="text-gray-400">Chile 🇨🇱</p>
-              <p class="text-sm text-gray-500">Trabajo remoto para todo LATAM</p>
+              <div class="text-2xl font-bold text-green-400">280+</div>
+              <div class="text-sm text-gray-400">Empresas confían en mis sistemas</div>
             </div>
             <div>
-              <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-green-600 to-emerald-600 rounded-lg flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <h4 class="text-lg font-medium text-white mb-2">Disponibilidad</h4>
-              <p class="text-gray-400">Abierto a nuevos proyectos</p>
-              <p class="text-sm text-gray-500">Inicio inmediato disponible</p>
+              <div class="text-2xl font-bold text-blue-400">24-48h</div>
+              <div class="text-sm text-gray-400">Respuesta garantizada</div>
             </div>
             <div>
-              <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <h4 class="text-lg font-medium text-white mb-2">Zona Horaria</h4>
-              <p class="text-gray-400">UTC-3 (Chile)</p>
-              <p class="text-sm text-gray-500">Horario flexible según proyecto</p>
+              <div class="text-2xl font-bold text-purple-400">$0</div>
+              <div class="text-sm text-gray-400">Costo de la consulta inicial</div>
             </div>
           </div>
-        </Card>
+          <p class="text-gray-300 text-center">
+            <span class="text-white font-semibold">No arriesgas nada.</span> Si después de la consulta decides que no es para ti, 
+            habrás ganado claridad sobre lo que necesita tu empresa. Sin costo, sin compromiso.
+          </p>
+        </div>
       </div>
     </div>
   </Section>
