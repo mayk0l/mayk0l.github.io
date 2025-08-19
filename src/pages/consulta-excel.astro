@@ -1,0 +1,455 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Button from '../components/Button.astro';
+
+// SEO específico para landing de Facebook Ads
+const seoData = {
+  title: "¿Cuánto Dinero Pierdes en Excel? - Consulta Gratuita | Maykol Salgado",
+  description: "Calculadora GRATIS: Descubre exactamente cuánto dinero pierdes mensualmente por usar Excel. Consulta gratuita de 30 minutos sin compromiso.",
+  keywords: "excel empresas, automatizar excel, sistema inventario, tiempo perdido excel, consulta gratuita",
+  url: "https://maykolsalgado.me/consulta-excel",
+  image: "https://maykolsalgado.me/images/og-maykol-salgado.svg"
+};
+---
+
+<MainLayout {...seoData}>
+  <!-- Facebook Pixel Event (comentado para evitar errores) -->
+  <!-- <script is:inline>
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'ViewContent', {
+        content_name: 'Consulta Excel Landing'
+      });
+    }
+  </script> -->
+
+  <!-- Hero Section con el mismo estilo que index -->
+  <section class="min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-8 pb-24">
+    <div class="max-w-6xl mx-auto w-full">
+      
+      <!-- Badge de credibilidad -->
+      <div class="text-center mb-8 fade-in-up">
+        <div class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-red-600/10 border border-red-600/20 rounded-full text-red-400 text-sm font-medium">
+          <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+          </svg>
+          <span class="text-center">¿Tu empresa pierde dinero cada mes sin saberlo?</span>
+        </div>
+      </div>
+
+      <!-- Titular Principal -->
+      <div class="text-center mb-12 fade-in-up px-4">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <span class="text-red-400">🚨 ¿Cuánto Dinero</span><br>
+          <span class="gradientHighlight">Pierdes en Excel?</span>
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+          Si tus empleados pasan <span class="text-yellow-400 font-bold">2+ horas diarias</span> en Excel, 
+          estás perdiendo <span class="text-red-400 font-bold">$89.000 CLP mensuales</span> por empleado solo en tiempo perdido
+        </p>
+      </div>
+
+      <!-- Problema vs Solución con estilo de index -->
+      <div class="fade-in-up animate-delay-200 text-center mb-12 px-4">
+        <div class="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-6 sm:p-8 max-w-5xl mx-auto">
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-6">🎯 La realidad de tu empresa vs La solución</h2>
+          <div class="grid md:grid-cols-2 gap-8 text-left">
+            <!-- Problema Actual -->
+            <div class="space-y-4">
+              <h3 class="text-lg font-semibold text-red-400 mb-4 text-center">❌ Tu Situación Actual</h3>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-red-400 text-sm">😰</span>
+                </div>
+                <p class="text-gray-300">2+ horas diarias copiando y pegando en Excel</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-red-400 text-sm">💸</span>
+                </div>
+                <p class="text-gray-300">Errores de cálculo que cuestan dinero</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-red-400 text-sm">📊</span>
+                </div>
+                <p class="text-gray-300">No sabes ganancias reales hasta fin de mes</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-red-400 text-sm">🤯</span>
+                </div>
+                <p class="text-gray-300">Inventario desactualizado = ventas perdidas</p>
+              </div>
+            </div>
+            
+            <!-- Solución -->
+            <div class="space-y-4">
+              <h3 class="text-lg font-semibold text-green-400 mb-4 text-center">✅ Con Mi Sistema</h3>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-green-400 text-sm">⚡</span>
+                </div>
+                <p class="text-gray-300"><strong>De 2 horas a 15 minutos</strong> automático</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-green-400 text-sm">💰</span>
+                </div>
+                <p class="text-gray-300"><strong>Cero errores</strong> = más dinero en tu bolsillo</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-green-400 text-sm">📈</span>
+                </div>
+                <p class="text-gray-300"><strong>Dashboard en tiempo real</strong> de ganancias</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-green-400 text-sm">🎯</span>
+                </div>
+                <p class="text-gray-300"><strong>Nunca más vendas</strong> productos agotados</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculadora Simple con estilo de index -->
+      <div class="fade-in-up animate-delay-400 text-center mb-12 px-4">
+        <div class="bg-slate-800/80 border border-slate-600/50 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
+          <h3 class="text-xl sm:text-2xl font-bold text-white mb-6">🧮 Calcula Tu Pérdida Mensual</h3>
+          <div class="grid sm:grid-cols-3 gap-6 text-center mb-6">
+            <div class="bg-slate-900/60 rounded-xl p-4">
+              <p class="text-gray-400 mb-2 text-sm">Empleados en Excel</p>
+              <p class="text-2xl sm:text-3xl font-bold text-white" id="empleados-num">3</p>
+            </div>
+            <div class="bg-slate-900/60 rounded-xl p-4">
+              <p class="text-gray-400 mb-2 text-sm">Horas diarias perdidas</p>
+              <p class="text-2xl sm:text-3xl font-bold text-yellow-400" id="horas-num">6</p>
+            </div>
+            <div class="bg-slate-900/60 rounded-xl p-4">
+              <p class="text-gray-400 mb-2 text-sm">Pérdida mensual</p>
+              <p class="text-2xl sm:text-3xl font-bold text-red-400" id="perdida-total">$267.000 CLP</p>
+            </div>
+          </div>
+          <div class="bg-green-900/20 border border-green-500/30 rounded-xl p-4">
+            <p class="text-green-400 font-semibold">
+              💡 <strong>Mi sistema se paga solo en 2-3 meses</strong> solo con el tiempo ahorrado
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario de Leads con estilo de index -->
+      <div class="fade-in-up animate-delay-600 text-center mb-12 px-4">
+        <div class="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-3">
+              📞 Consulta GRATUITA de 30 Minutos
+            </h3>
+            <p class="text-lg sm:text-xl text-gray-300 mb-6">
+              Te muestro <span class="text-green-400 font-semibold">exactamente cuánto pierdes</span> y cómo solucionarlo
+            </p>
+          </div>
+
+          <div class="bg-green-900/20 border border-green-500/30 rounded-xl p-4 sm:p-6 mb-8">
+            <h4 class="font-bold text-green-400 mb-4 text-lg">En esta consulta gratis:</h4>
+            <div class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
+              <div class="flex items-center gap-2">
+                <span class="text-green-400">✅</span>
+                <span>Calculamos tus pérdidas REALES</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-green-400">✅</span>
+                <span>3 procesos que automatizar HOY</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-green-400">✅</span>
+                <span>Plan paso a paso completo</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-green-400">✅</span>
+                <span>SIN COSTO, SIN COMPROMISO</span>
+              </div>
+            </div>
+          </div>
+
+          <form action="https://formspree.io/f/mgvzqgyn" method="post" class="space-y-4" id="excel-form">
+            <!-- Formspree hidden fields -->
+            <input type="hidden" name="_next" id="_next_url" value="https://maykolsalgado.me/gracias" />
+            <input type="hidden" name="_subject" value="🚨 NUEVO LEAD B2B - Consulta Excel desde Facebook Ads" />
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" />
+            
+            <div class="grid sm:grid-cols-2 gap-4">
+              <input 
+                type="text" 
+                name="name"
+                placeholder="Tu Nombre" 
+                required
+                class="w-full px-4 py-3 bg-slate-800/80 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:outline-none transition-colors"
+              >
+              <input 
+                type="text" 
+                name="company"
+                placeholder="Nombre de tu Empresa" 
+                required
+                class="w-full px-4 py-3 bg-slate-800/80 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:outline-none transition-colors"
+              >
+            </div>
+            
+            <input 
+              type="tel" 
+              name="phone"
+              placeholder="WhatsApp (ej: +56912345678)" 
+              required
+              class="w-full px-4 py-3 bg-slate-800/80 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:outline-none transition-colors"
+            >
+            
+            <input 
+              type="email" 
+              name="_replyto"
+              placeholder="Tu email (opcional)" 
+              class="w-full px-4 py-3 bg-slate-800/80 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:outline-none transition-colors"
+            >
+            
+            <select 
+              name="empleados" 
+              required
+              class="w-full px-4 py-3 bg-slate-800/80 border border-slate-600/50 rounded-lg text-white focus:border-green-400 focus:outline-none transition-colors"
+              style="color: white;"
+            >
+              <option value="" disabled selected style="color: #9ca3af;">¿Cuántos empleados usan Excel diariamente?</option>
+              <option value="1-2" style="color: white; background-color: #1e293b;">1-2 empleados</option>
+              <option value="3-5" style="color: white; background-color: #1e293b;">3-5 empleados</option>
+              <option value="6-10" style="color: white; background-color: #1e293b;">6-10 empleados</option>
+              <option value="11+" style="color: white; background-color: #1e293b;">11+ empleados</option>
+            </select>
+            
+            <textarea 
+              name="problema"
+              placeholder="¿Cuál es tu mayor problema con Excel/procesos manuales? (Opcional)"
+              rows="3"
+              class="w-full px-4 py-3 bg-slate-800/80 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:outline-none resize-none transition-colors"
+            ></textarea>
+            
+            <!-- CTA usando el componente Button -->
+            <div class="pt-2">
+              <Button 
+                variant="primary" 
+                size="lg" 
+                type="submit"
+                class="w-full text-lg sm:text-xl px-8 py-4 shadow-2xl shadow-green-600/25"
+              >
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
+                </svg>
+                🚀 QUIERO MI CONSULTA GRATUITA
+              </Button>
+            </div>
+            
+            <!-- Status container para feedback inmediato -->
+            <div id="excel-form-status" aria-live="polite" class="text-sm"></div>
+            
+            <p class="text-center text-gray-400 text-sm pt-2">
+              Te contactaré por WhatsApp en menos de 2 horas
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Social Proof con estilo de index -->
+      <div class="text-center fade-in-up animate-delay-800 px-4">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-gray-400">
+          <div class="flex items-center gap-2">
+            <span class="text-green-400 font-bold">✅</span>
+            <span>Sin compromiso</span>
+          </div>
+          <div class="hidden sm:block w-1 h-1 bg-gray-600 rounded-full"></div>
+          <div class="flex items-center gap-2">
+            <span class="text-green-400 font-bold">⚡</span>
+            <span>Respuesta en 2 horas</span>
+          </div>
+          <div class="hidden sm:block w-1 h-1 bg-gray-600 rounded-full"></div>
+          <div class="flex items-center gap-2">
+            <span class="text-green-400 font-bold">🇨🇱</span>
+            <span>Especialista en Chile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estilos adicionales para el select -->
+  <style>
+    /* Estilos específicos para el select del formulario */
+    #excel-form select {
+      color: white !important;
+      background-color: rgba(30, 41, 59, 0.8) !important;
+    }
+    
+    #excel-form select option {
+      color: white !important;
+      background-color: #1e293b !important;
+    }
+    
+    #excel-form select option:disabled {
+      color: #9ca3af !important;
+    }
+    
+    /* Mejorar la apariencia del select en diferentes navegadores */
+    #excel-form select::-ms-expand {
+      display: none;
+    }
+    
+    #excel-form select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px;
+      padding-right: 40px;
+    }
+  </style>
+
+  <!-- JavaScript para Formspree -->
+  <script is:inline>
+    (function(){
+      try {
+        const form = document.getElementById('excel-form');
+        if (!form) return;
+
+        // Ensure _next points to local origin when testing on localhost
+        const next = document.getElementById('_next_url');
+        if (next) {
+          const host = location.hostname;
+          if (host === 'localhost' || host === '127.0.0.1') {
+            next.value = location.origin + '/gracias';
+          }
+        }
+
+        // Copy UTM params into hidden fields if present (para trackear Facebook Ads)
+        const params = new URLSearchParams(location.search);
+        ['utm_source','utm_medium','utm_campaign','utm_term','fbclid'].forEach(k => {
+          const v = params.get(k);
+          if (v) {
+            const inp = document.createElement('input');
+            inp.type = 'hidden';
+            inp.name = k;
+            inp.value = v;
+            form.appendChild(inp);
+          }
+        });
+
+        // Get status container
+        const statusEl = document.getElementById('excel-form-status');
+
+        // Submit handler using fetch
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          statusEl.innerHTML = '';
+
+          // disable submit button
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const originalText = submitBtn ? submitBtn.innerHTML : '';
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.setAttribute('aria-busy','true');
+            submitBtn.innerHTML = '⏳ Enviando...';
+          }
+
+          // Respect honeypot: if filled, abort
+          const gotcha = form.querySelector('[name="_gotcha"]');
+          if (gotcha && gotcha.value) {
+            statusEl.innerHTML = '<div class="text-red-400">Spam detected.</div>';
+            if (submitBtn) { 
+              submitBtn.disabled = false; 
+              submitBtn.removeAttribute('aria-busy'); 
+              submitBtn.innerHTML = originalText;
+            }
+            return;
+          }
+
+          try {
+            const formData = new FormData(form);
+            
+            const resp = await fetch(form.action, {
+              method: form.method || 'POST',
+              headers: {
+                'Accept': 'application/json'
+              },
+              body: formData
+            });
+
+            let json = null;
+            try { json = await resp.json(); } catch (_) { /* non-json response */ }
+
+            if (resp.ok) {
+              statusEl.innerHTML = '<div class="text-green-400 font-medium">✅ Consulta enviada correctamente. Te contactaré por WhatsApp en menos de 2 horas.</div>';
+              
+              // También crear mensaje de WhatsApp automático como backup
+              const data = Object.fromEntries(formData);
+              const mensaje = `Hola Maykol, completé el formulario Excel:
+
+👤 Nombre: ${data.name}
+🏢 Empresa: ${data.company}
+📱 WhatsApp: ${data.phone}
+👥 Empleados en Excel: ${data.empleados}
+${data.problema ? `📝 Problema: ${data.problema}` : ''}
+
+¿Cuándo podemos coordinar la consulta de 30 minutos?`;
+
+              const whatsappUrl = `https://wa.me/56972438969?text=${encodeURIComponent(mensaje)}`;
+              
+              // Mostrar ambas opciones por un momento
+              setTimeout(() => {
+                statusEl.innerHTML += `<div class="mt-2"><a href="${whatsappUrl}" target="_blank" class="text-green-400 hover:underline">👆 Haz click aquí si quieres contactarme ahora por WhatsApp</a></div>`;
+              }, 1000);
+
+              // Redirect después de mostrar mensaje
+              setTimeout(() => {
+                const nextUrl = (document.getElementById('_next_url') || {}).value || '/gracias';
+                window.location.href = nextUrl;
+              }, 4000);
+              
+            } else {
+              const message = (json && (json.error || json.message)) || `Error ${resp.status}`;
+              statusEl.innerHTML = `<div class="text-red-400">Ocurrió un error: ${message}</div>`;
+            }
+          } catch (err) {
+            console.error('Excel form submit error', err);
+            statusEl.innerHTML = '<div class="text-red-400">Error de conexión. Reintentando por WhatsApp...</div>';
+            
+            // Fallback automático a WhatsApp si falla el email
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            const mensaje = `Hola Maykol, tuve problemas con el formulario, aquí mi info:
+
+👤 Nombre: ${data.name}
+🏢 Empresa: ${data.company}
+📱 WhatsApp: ${data.phone}
+👥 Empleados en Excel: ${data.empleados}
+${data.problema ? `📝 Problema: ${data.problema}` : ''}`;
+
+            const whatsappUrl = `https://wa.me/56972438969?text=${encodeURIComponent(mensaje)}`;
+            setTimeout(() => {
+              window.open(whatsappUrl, '_blank');
+            }, 1500);
+            
+          } finally {
+            if (submitBtn) { 
+              submitBtn.disabled = false; 
+              submitBtn.removeAttribute('aria-busy'); 
+              submitBtn.innerHTML = originalText;
+            }
+          }
+        });
+
+      } catch (e) {
+        console.warn('Excel form helper error', e);
+      }
+    })();
+  </script>
+</MainLayout>
