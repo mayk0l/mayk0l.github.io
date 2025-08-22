@@ -162,11 +162,11 @@ Estos problemas no son únicos de tu empresa. La mayoría de PYMEs chilenas los 
 
 ### 📲 Agenda Ahora:
 
-**WhatsApp:** [+56 9 1234 5678](https://wa.me/56912345678)  
-**Email:** contacto@maykol.dev
+**WhatsApp:** [+56 9 7243 8969](https://wa.me/56972438969)  
+**Email:** maykol.salgado@proton.me
 
 **O llena este formulario rápido:**
-👉 [QUIERO MI ANÁLISIS GRATUITO](https://maykol.dev/contacto)
+👉 [QUIERO MI ANÁLISIS GRATUITO](https://maykolsalgado.me/contacto)
 
 ---
 
